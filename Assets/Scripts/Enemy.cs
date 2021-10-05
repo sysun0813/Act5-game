@@ -15,8 +15,24 @@ public interface EnemyInterface
 
 }
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, EnemyInterface
 {
+    public string _name;
+    public string Name { get { return _name; } }
+
+
+    public int maxHP;
+    public int MaxHP { get { return maxHP; } }
+
+
+    public int attack;
+    public int Attack { get { return attack; } }
+
+
+    public int defense;
+    public int Defense { get { return defense; } }
+
+
     [Header("적 이동속도")]
     public float speed;
 
