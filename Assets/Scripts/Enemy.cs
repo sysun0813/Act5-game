@@ -2,6 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface EnemyInterface
+{
+    string Name { get; }
+
+    int MaxHP { get; }
+
+    int Attack { get; }
+
+    int Defense { get; }
+
+
+}
+
 public class Enemy : MonoBehaviour
 {
     [Header("적 이동속도")]
