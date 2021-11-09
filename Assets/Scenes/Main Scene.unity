@@ -893,7 +893,7 @@ MonoBehaviour:
   attackPower: 10
   defense: 5
   attackDelay: 2.5
-  moveSpeed: 5
+  moveSpeed: 1
   attackRange: 1.5
 --- !u!1 &574974433
 GameObject:
@@ -1785,6 +1785,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411649266}
   m_CullTransparentMesh: 1
+--- !u!1 &1421820999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7279268270125200968, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+  m_PrefabInstance: {fileID: 7279268270199170565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1421821000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421820999}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4253f526f50cd604888679bd3c71b6af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1537318072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,8 +2690,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200970, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200970, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200970, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200970, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.94
+      value: 8.72
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200970, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2706,12 +2742,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 9cb561776eb8dbe4d86c149a5bff4ad6, type: 3}
+    - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200980, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_Radius
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200980, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: Name
-      value: molang
+      value: Gen_An
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: _name
@@ -2739,7 +2787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: attackDelay

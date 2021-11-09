@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    
+    Animator anim;
+
     bool isAttack;
 
     Main_Character player;
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         currentHP = maxHP;
     }
 
@@ -19,6 +21,7 @@ public class Enemy : Character
         if ((Physics2D.OverlapCircle(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))))
         {
             player = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
+            anim.SetBool("IsWalk", false);
             if(!isAttack)
             {
                 isAttack = true;
@@ -28,6 +31,7 @@ public class Enemy : Character
         else
         {
             isAttack = false;
+            anim.SetBool("IsWalk", true);
             Move();
             CancelInvoke("AttackPlayer");
         }
@@ -44,6 +48,7 @@ public class Enemy : Character
     {
         if (player.currentHP > 0)
         {
+            anim.SetTrigger("Attack");
             player.currentHP -= attackPower;
 
         }
