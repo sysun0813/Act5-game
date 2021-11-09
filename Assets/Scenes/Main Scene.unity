@@ -887,14 +887,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d3ec185978c584ba0b187dc016659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\uD50C\uB808\uC774\uC5B41"
+  Name: Hero
   maxHP: 100
-  nowHP: 100
-  attackpower: 10
+  currentHP: 0
+  attackPower: 10
   defense: 5
-  attackdelay: 0
-  movespeed: 1
-  range: 1
+  attackDelay: 2.5
+  moveSpeed: 5
+  attackRange: 1.5
 --- !u!1 &574974433
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2710,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: Name
+      value: molang
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: _name
       value: "\uC801"
       objectReference: {fileID: 0}
@@ -2734,8 +2738,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: attackDelay
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: attackPower
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: attackRange
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
