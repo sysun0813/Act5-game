@@ -35,21 +35,24 @@ public class Main_Character : MonoBehaviour , CharacterInterface
     public float NowHP { get { return nowHP; } }
 
 
-    public float attackpower;
-    public float AttackPower { get { return attackpower; } }
+    public float attackPower;
+    public float AttackPower { get { return attackPower; } }
 
 
     public float defense;
     public float Defense { get { return defense; } }
 
-    public float attackdelay;
-    public float AttackDelay { get { return attackdelay; } }
+    public float attackDelay;
+    public float AttackDelay { get { return attackDelay; } }
 
-    public float movespeed;
-    public float MoveSpeed { get { return movespeed; } }
+    public float moveSpeed;
+    public float MoveSpeed { get { return moveSpeed; } }
 
     public float range;
     public float AttackRange { get { return range; } }
+
+    Collider2D[] hitColliders;
+    bool isAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -62,23 +65,29 @@ public class Main_Character : MonoBehaviour , CharacterInterface
     {
         if(!(Physics2D.OverlapCircle(transform.position, range, LayerMask.GetMask("EnemyCharacter"))))
         {
+            isAttack = false;
             Move();
         }
         else
         {
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, range, LayerMask.GetMask("EnemyCharacter"));
-            Debug.Log(hitColliders[0]);
+            hitColliders = Physics2D.OverlapCircleAll(transform.position, range, LayerMask.GetMask("EnemyCharacter"));
+            if (!isAttack)
+            {
+                isAttack = true;
+                Invoke("Attack", attackDelay);
+            }
         }
        
     }
 
     public void Move()
     {
-        transform.position += Vector3.right * movespeed * Time.deltaTime;
+        transform.position += Vector3.right * moveSpeed * Time.deltaTime;
     }
     private void Attack()
     {
-
+        hitColliders[0].GetComponent<Enemy>().nowHP -= attackPower;
+        isAttack = false;
     }
 
 }
