@@ -7,7 +7,7 @@ public interface CharacterInterface
     string Name { get; }
 
     float MaxHP { get; }
-
+    float NowHP { get; }
     float Defense { get; }
 
     float MoveSpeed { get; }
@@ -31,6 +31,9 @@ public class Main_Character : MonoBehaviour , CharacterInterface
     public float maxHP;
     public float MaxHP { get { return maxHP; } }
 
+    public float nowHP;
+    public float NowHP { get { return nowHP; } }
+
 
     public float attackpower;
     public float AttackPower { get { return attackpower; } }
@@ -47,6 +50,7 @@ public class Main_Character : MonoBehaviour , CharacterInterface
 
     public float range;
     public float AttackRange { get { return range; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +64,11 @@ public class Main_Character : MonoBehaviour , CharacterInterface
         {
             Move();
         }
+        else
+        {
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, range, LayerMask.GetMask("EnemyCharacter"));
+            Debug.Log(hitColliders[0]);
+        }
        
     }
 
@@ -67,4 +76,9 @@ public class Main_Character : MonoBehaviour , CharacterInterface
     {
         transform.position += Vector3.right * movespeed * Time.deltaTime;
     }
+    private void Attack()
+    {
+
+    }
+
 }
