@@ -20,7 +20,7 @@ public interface CharacterInterface
 
 }
 
-public class Main_Character_Move : MonoBehaviour , CharacterInterface
+public class Main_Character : MonoBehaviour , CharacterInterface
 {
     [Header("플레이어 스탯")]
 
