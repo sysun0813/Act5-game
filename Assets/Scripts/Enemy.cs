@@ -41,13 +41,13 @@ public class Enemy : MonoBehaviour, EnemyInterface
 
     bool isAttack;
 
-    Collider2D[] players;
+    Main_Character[] players;
 
     private void Update()
     {
         if ((Physics2D.OverlapCircle(transform.position, radius, LayerMask.GetMask("PlayerCharacter"))))
         {
-            players = (Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask("PlayerCharacter")));
+            players = (Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask("PlayerCharacter")).Clone() as Main_Character[]);
             if(!isAttack)
             {
                 isAttack = true;
@@ -71,8 +71,15 @@ public class Enemy : MonoBehaviour, EnemyInterface
 
     void AttackPlayer()
     {
-        
-        players[0].GetComponent<Main_Character>().nowHP -= attack;
+        if(players[0].NowHP > 0)
+        {
+            players[0].nowHP -= attack;
+
+        }
+        else
+        {
+            // 플레이어 죽음 처리
+        }
         isAttack = false;
 
     }
