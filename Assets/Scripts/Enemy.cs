@@ -38,24 +38,30 @@ public class Enemy : MonoBehaviour, EnemyInterface
 
     public float radius;
 
+    Collider2D[] players;
+
+    ContactFilter2D contactFilter2D;
+
     private void Update()
     {
-        if(Physics2D.OverlapCircle(transform.position, radius, LayerMask.GetMask("PlayerCharacter")))
+        players = Physics2D.OverlapBoxAll(transform.position, new Vector2(radius, radius), 0, LayerMask.GetMask("Player"));
+        if (players != null)
         {
-            Debug.Log("플레이어 만남");
-
-
+            Debug.Log(players[0]);
         }
-
         else
         {
             Move();
 
         }
+
+        
     }
 
     private void Move()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
+
+    
 }
