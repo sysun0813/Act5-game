@@ -6,11 +6,13 @@ public interface EnemyInterface
 {
     string Name { get; }
 
-    int MaxHP { get; }
+    float MaxHP { get; }
+   
+    float NowHP { get; }
 
-    int Attack { get; }
+    float Attack { get; }
 
-    int Defense { get; }
+    float Defense { get; }
 
 
 }
@@ -21,16 +23,19 @@ public class Enemy : MonoBehaviour, EnemyInterface
     public string Name { get { return _name; } }
 
 
-    public int maxHP;
-    public int MaxHP { get { return maxHP; } }
+    public float maxHP;
+    public float MaxHP { get { return maxHP; } }
+
+    public float nowHP;
+    public float NowHP { get { return nowHP; } }
 
 
-    public int attack;
-    public int Attack { get { return attack; } }
+    public float attack;
+    public float Attack { get { return attack; } }
 
 
-    public int defense;
-    public int Defense { get { return defense; } }
+    public float defense;
+    public float Defense { get { return defense; } }
 
     public float attackDelay;
 
