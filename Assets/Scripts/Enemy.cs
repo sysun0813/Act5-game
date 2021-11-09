@@ -32,27 +32,33 @@ public class Enemy : MonoBehaviour, EnemyInterface
     public int defense;
     public int Defense { get { return defense; } }
 
+    public float attackDelay;
 
     [Header("적 이동속도")]
     public float speed;
 
     public float radius;
 
-    Collider2D[] players;
+    bool isAttack;
 
-    ContactFilter2D contactFilter2D;
+    Collider2D[] players;
 
     private void Update()
     {
-        players = Physics2D.OverlapBoxAll(transform.position, new Vector2(radius, radius), 0, LayerMask.GetMask("Player"));
-        if (players != null)
+        if ((Physics2D.OverlapCircle(transform.position, radius, LayerMask.GetMask("PlayerCharacter"))))
         {
-            Debug.Log(players[0]);
+            players = (Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask("PlayerCharacter")));
+            if(!isAttack)
+            {
+                isAttack = true;
+                Invoke("AttackPlayer", attackDelay);
+            }
         }
         else
         {
+            isAttack = false;
             Move();
-
+            CancelInvoke("AttackPlayer");
         }
 
         
@@ -63,5 +69,11 @@ public class Enemy : MonoBehaviour, EnemyInterface
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
-    
+    void AttackPlayer()
+    {
+        
+        players[0].GetComponent<Main_Character>().nowHP -= attack;
+        isAttack = false;
+
+    }
 }
