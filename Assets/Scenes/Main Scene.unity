@@ -887,8 +887,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d3ec185978c584ba0b187dc016659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  radius: 1
+  _name: "\uD50C\uB808\uC774\uC5B41"
+  maxHP: 100
+  attackpower: 10
+  defense: 5
+  attackdelay: 0
+  movespeed: 1
+  range: 1
 --- !u!1 &574974433
 GameObject:
   m_ObjectHideFlags: 0
