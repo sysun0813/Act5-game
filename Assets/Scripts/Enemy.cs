@@ -20,9 +20,13 @@ public class Enemy : Character
     {
         if ((Physics2D.OverlapCircle(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))))
         {
-            player = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
+            if(player == null)
+            {
+                player = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
+                AttackPlayer();
+            }
             anim.SetBool("IsWalk", false);
-            if(!isAttack)
+            if(!isAttack && player != null)
             {
                 isAttack = true;
                 Invoke("AttackPlayer", attackDelay);
@@ -35,8 +39,6 @@ public class Enemy : Character
             Move();
             CancelInvoke("AttackPlayer");
         }
-
-        
     }
 
     private void Move()
@@ -46,17 +48,15 @@ public class Enemy : Character
 
     void AttackPlayer()
     {
-        if (player.currentHP > 0)
-        {
-            anim.SetTrigger("Attack");
-            player.currentHP -= attackPower;
+        anim.SetTrigger("Attack");
+        player.currentHP -= attackPower;
 
-        }
-        else
+        if (player.currentHP <= 0)
         {
             // 플레이어 죽음 처리
+            player.gameObject.SetActive(false);
+            player = null;
         }
         isAttack = false;
-
     }
 }
