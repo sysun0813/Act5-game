@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Transform targetTransform;
+    public Transform targetTransform;
 
     
 
@@ -16,13 +16,17 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        //targetTransform=GameObject.Find("StageManager").GetComponent<StageManager>().players
+        targetTransform = GameObject.Find("StageManager").GetComponent<StageManager>().players[0].transform;
         cameraHalfHeight = Camera.main.orthographicSize;
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
     }
 
     private void LateUpdate()
     {
+        if (targetTransform == null)
+        {
+            targetTransform = GameObject.Find("StageManager").GetComponent<StageManager>().players[0].transform;
+        }
         Vector3 desiredPosition = new Vector3(
             Mathf.Clamp(targetTransform.position.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),
             transform.position.y,
