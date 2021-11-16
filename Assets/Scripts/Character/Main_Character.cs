@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Main_Character : Character
 {
-    Enemy hitCollider;
+    Enemy enemyplayer;
     bool isAttack;
 
     private void Start()
@@ -23,7 +23,7 @@ public class Main_Character : Character
         }
         else
         {
-            hitCollider = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
+            enemyplayer = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
             if (!isAttack)
             {
                 isAttack = true;
@@ -39,14 +39,14 @@ public class Main_Character : Character
     }
     private void Attack()
     {
-        if (hitCollider.currentHP > 0)
+        if (enemyplayer.currentHP > 0)
         {
-            hitCollider.currentHP -= attackPower;
+            enemyplayer.currentHP -= attackPower;
 
         }
         else
         {
-            // 플레이어 죽음 처리
+            enemyplayer.gameObject.SetActive(false);
         }
 
         isAttack = false;

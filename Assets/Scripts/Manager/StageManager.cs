@@ -6,11 +6,22 @@ public class StageManager : MonoBehaviour
 {
     [SerializeField] EnemySpawner enemySpawner;
 
-    public float spawnDelay;
+    public float enemyspawnDelay;
 
-    [SerializeField] List<GameObject> enemies;
+    public List<GameObject> enemies;
 
-    int spawnIndex;
+    int enemyspawnIndex;
+
+
+
+    [SerializeField] PlayerSpawner playerSpawner;
+
+    public float playerspawnDelay;
+
+    public List<GameObject> players;
+
+    int playerspawnIndex;
+
 
     private void Start()
     {
@@ -19,11 +30,23 @@ public class StageManager : MonoBehaviour
 
     IEnumerator StartSpawn()
     {
-        while(spawnIndex < enemies.Count)
+        while(enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
         {
-            yield return new WaitForSeconds(spawnDelay);
-            enemySpawner.SpawnEnemy(enemies[spawnIndex]);
-            spawnIndex++;
+            if (enemyspawnIndex < enemies.Count)
+            {
+                yield return new WaitForSeconds(enemyspawnDelay);
+                enemySpawner.SpawnEnemy(enemies[enemyspawnIndex]);
+                enemyspawnIndex++;
+            }
+
+
+            if (playerspawnIndex < players.Count)
+            {
+                yield return new WaitForSeconds(playerspawnDelay);
+                playerSpawner.SpawnPlayer(players[playerspawnIndex]);
+                playerspawnIndex++;
+            }
+
         }
     }
 }
