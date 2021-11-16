@@ -52,4 +52,5 @@ public class Main_Character : Character
         isAttack = false;
     }
 
+
 }
