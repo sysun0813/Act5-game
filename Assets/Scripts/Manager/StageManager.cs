@@ -15,12 +15,14 @@ public class StageManager : MonoBehaviour
 
 
     [SerializeField] PlayerSpawner playerSpawner;
-
+    
     public float playerspawnDelay;
 
     public List<GameObject> players;
+    
+    public List<GameObject> currentPlayers;
 
-    int playerspawnIndex;
+    public int playerspawnIndex;
 
 
     private void Start()
@@ -43,7 +45,7 @@ public class StageManager : MonoBehaviour
             if (playerspawnIndex < players.Count)
             {
                 yield return new WaitForSeconds(playerspawnDelay);
-                playerSpawner.SpawnPlayer(players[playerspawnIndex]);
+                currentPlayers.Add(playerSpawner.SpawnPlayer(players[playerspawnIndex]));
                 playerspawnIndex++;
             }
 

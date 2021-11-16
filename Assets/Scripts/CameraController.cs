@@ -14,25 +14,29 @@ public class CameraController : MonoBehaviour
 
     public float limitMinX, limitMaxX, limitMinY, limitMaxY;
 
+    StageManager stageManager;
+
     private void Start()
     {
-        targetTransform = GameObject.Find("StageManager").GetComponent<StageManager>().players[0].transform;
+        stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
         cameraHalfHeight = Camera.main.orthographicSize;
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
     }
 
     private void LateUpdate()
     {
-        if (targetTransform == null)
+        if (stageManager.currentPlayers.Count > 0)
         {
-            targetTransform = GameObject.Find("StageManager").GetComponent<StageManager>().players[0].transform;
+            targetTransform = stageManager.currentPlayers[0].transform;
+
         }
+
         Vector3 desiredPosition = new Vector3(
             Mathf.Clamp(targetTransform.position.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),
             transform.position.y,
             -10f);
-
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
+
     }
 
     private void OnDrawGizmos()
