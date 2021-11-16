@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform targetTransform;
+    private Transform targetTransform;
+
+    
 
     float cameraHalfHeight, cameraHalfWidth;
 
@@ -14,6 +16,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        //targetTransform=GameObject.Find("StageManager").GetComponent<StageManager>().players
         cameraHalfHeight = Camera.main.orthographicSize;
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
     }
