@@ -2080,9 +2080,9 @@ MonoBehaviour:
   playerSpawner: {fileID: 1802762002}
   playerspawnDelay: 0.5
   players:
-  - {fileID: 1995169862938230257, guid: ffee5f52cb2bfb745aec4438253b0dbd, type: 3}
-  - {fileID: 1995169862938230257, guid: ffee5f52cb2bfb745aec4438253b0dbd, type: 3}
-  - {fileID: 1995169862938230257, guid: ffee5f52cb2bfb745aec4438253b0dbd, type: 3}
+  - {fileID: 5867276503401642660, guid: 7f4e1bfafcd402145a805e3b47e8a583, type: 3}
+  - {fileID: 5867276503401642660, guid: 7f4e1bfafcd402145a805e3b47e8a583, type: 3}
+  - {fileID: 5867276503401642660, guid: 7f4e1bfafcd402145a805e3b47e8a583, type: 3}
   currentPlayers: []
   playerspawnIndex: 0
 --- !u!1 &1701225831

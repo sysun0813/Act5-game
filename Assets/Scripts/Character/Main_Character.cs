@@ -5,21 +5,30 @@ using UnityEngine;
 
 public class Main_Character : Character
 {
+    CircleCollider2D circleCollider;
+
+    Animator anim;
+
     Enemy enemyplayer;
     bool isAttack;
 
+
     private void Start()
     {
+        circleCollider = GetComponent<CircleCollider2D>();
+        anim = GetComponent<Animator>();
         currentHP = maxHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!(Physics2D.OverlapCircle(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))))
+        if(!(Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
         {
             isAttack = false;
-            Move();
+            MoveCharacter(true);
+            anim.SetBool("IsMove", true);
+            CancelInvoke("Attack");
         }
         else
         {
@@ -29,16 +38,15 @@ public class Main_Character : Character
                 isAttack = true;
                 Invoke("Attack", attackDelay);
             }
+            anim.SetBool("IsMove", false);
+
         }
-       
+
     }
 
-    public void Move()
-    {
-        transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-    }
     private void Attack()
     {
+        anim.SetTrigger("Attack");
         if (enemyplayer.currentHP > 0)
         {
             enemyplayer.currentHP -= attackPower;
@@ -52,5 +60,9 @@ public class Main_Character : Character
         isAttack = false;
     }
 
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);
+    }
 }

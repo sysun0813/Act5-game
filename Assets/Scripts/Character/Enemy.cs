@@ -6,6 +6,9 @@ public class Enemy : Character
 {
     Animator anim;
 
+    CircleCollider2D circleCollider;
+
+
     bool isAttack;
 
     Main_Character player;
@@ -13,19 +16,20 @@ public class Enemy : Character
     private void Start()
     {
         anim = GetComponent<Animator>();
+        circleCollider = GetComponent<CircleCollider2D>();
         currentHP = maxHP;
     }
 
     private void Update()
     {
-        if ((Physics2D.OverlapCircle(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))))
+        if ((Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("PlayerCharacter"))))
         {
             if(player == null)
             {
                 player = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
                 AttackPlayer();
             }
-            anim.SetBool("IsWalk", false);
+            anim.SetBool("IsMove", false);
             if(!isAttack && player != null)
             {
                 isAttack = true;
@@ -35,15 +39,12 @@ public class Enemy : Character
         else
         {
             isAttack = false;
-            anim.SetBool("IsWalk", true);
-            Move();
+            anim.SetBool("IsMove", true);
+
+            MoveCharacter(false);
+
             CancelInvoke("AttackPlayer");
         }
-    }
-
-    private void Move()
-    {
-        transform.position += Vector3.left * moveSpeed * Time.deltaTime;
     }
 
     void AttackPlayer()
@@ -58,5 +59,10 @@ public class Enemy : Character
             player = null;
         }
         isAttack = false;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);
     }
 }

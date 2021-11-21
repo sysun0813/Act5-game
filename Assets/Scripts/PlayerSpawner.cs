@@ -8,7 +8,7 @@ public class PlayerSpawner : MonoBehaviour
     {
         float randNum = Random.Range(0f, 1f);
 
-        SpriteRenderer playerSpriteRenderer = Instantiate(SpawnedPlayer, transform.position + (Vector3.up * randNum), Quaternion.identity).transform.GetChild(0).GetComponent<SpriteRenderer>();
+        SpriteRenderer playerSpriteRenderer = Instantiate(SpawnedPlayer, transform.position + (Vector3.up * randNum), Quaternion.identity).GetComponent<SpriteRenderer>();
         playerSpriteRenderer.sortingOrder += (int)Mathf.Lerp(3, 0, randNum);
 
 
