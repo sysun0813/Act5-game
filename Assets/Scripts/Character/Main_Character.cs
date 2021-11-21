@@ -9,7 +9,6 @@ public class Main_Character : Character
 
     Animator anim;
 
-    Enemy enemyplayer;
     bool isAttack;
 
 
@@ -23,44 +22,66 @@ public class Main_Character : Character
     // Update is called once per frame
     void Update()
     {
-        if(!(Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
+        //if(!(Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
+        //{
+        //    isAttack = false;
+        //    MoveCharacter();
+        //    anim.SetBool("IsMove", true);
+        //    CancelInvoke("AttackEnemy");
+        //}
+        //else
+        //{
+        //    targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
+        //    if (!isAttack)
+        //    {
+        //        isAttack = true;
+        //        Invoke("AttackEnemy", attackDelay);
+        //    }
+        //    anim.SetBool("IsMove", false);
+
+        //}
+        if ((Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
         {
-            isAttack = false;
-            MoveCharacter(true);
-            anim.SetBool("IsMove", true);
-            CancelInvoke("Attack");
-        }
-        else
-        {
-            enemyplayer = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
-            if (!isAttack)
+            if (targetCharacter == null)
+            {
+                try
+                {
+                    targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
+                    AttackEnemy();
+
+                }
+                catch
+                {
+
+                }
+            }
+
+            anim.SetBool("IsMove", false);
+            if (!isAttack && targetCharacter != null)
             {
                 isAttack = true;
-                Invoke("Attack", attackDelay);
+                Invoke("AttackEnemy", attackDelay);
             }
-            anim.SetBool("IsMove", false);
-
-        }
-
-    }
-
-    private void Attack()
-    {
-        anim.SetTrigger("Attack");
-        if (enemyplayer.currentHP > 0)
-        {
-            enemyplayer.currentHP -= attackPower;
-
         }
         else
         {
-            enemyplayer.gameObject.SetActive(false);
-        }
+            isAttack = false;
+            anim.SetBool("IsMove", true);
 
+            MoveCharacter();
+
+            CancelInvoke("AttackEnemy");
+        }
+    }
+
+    private void AttackEnemy()
+    {
+        anim.SetTrigger("Attack");
+        Attack(targetCharacter);
         isAttack = false;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    // 애니메이터
     Animator anim;
 
     CircleCollider2D circleCollider;
 
-
     bool isAttack;
 
-    Main_Character player;
 
     private void Start()
     {
@@ -24,13 +23,22 @@ public class Enemy : Character
     {
         if ((Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("PlayerCharacter"))))
         {
-            if(player == null)
+            if(targetCharacter == null)
             {
-                player = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
-                AttackPlayer();
+                try
+                {
+                    targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
+                    AttackPlayer();
+
+                }
+                catch
+                {
+
+                }
             }
+
             anim.SetBool("IsMove", false);
-            if(!isAttack && player != null)
+            if(!isAttack && targetCharacter != null)
             {
                 isAttack = true;
                 Invoke("AttackPlayer", attackDelay);
@@ -41,7 +49,7 @@ public class Enemy : Character
             isAttack = false;
             anim.SetBool("IsMove", true);
 
-            MoveCharacter(false);
+            MoveCharacter();
 
             CancelInvoke("AttackPlayer");
         }
@@ -50,17 +58,10 @@ public class Enemy : Character
     void AttackPlayer()
     {
         anim.SetTrigger("Attack");
-        player.currentHP -= attackPower;
-
-        if (player.currentHP <= 0)
-        {
-            // 플레이어 죽음 처리
-            player.gameObject.SetActive(false);
-            player = null;
-        }
+        Attack(targetCharacter);
         isAttack = false;
     }
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);

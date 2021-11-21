@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
 
     float cameraHalfHeight, cameraHalfWidth;
 
+    [Header("낮을 수록 부드럽게 따라감")]
     public float smoothSpeed = 3f;
 
     public float limitMinX, limitMaxX, limitMinY, limitMaxY;

@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 1903710147736189061}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4253f526f50cd604888679bd3c71b6af, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad3d509d8c99eef4bbb949b0578c58f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -28,7 +28,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7279268270125200968, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_Name
-      value: Gen_an Variant
+      value: SwordMan
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200970, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_RootOrder
@@ -87,9 +87,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4723107735738678597, guid: 9cb561776eb8dbe4d86c149a5bff4ad6, type: 3}
+      objectReference: {fileID: 4189619276563519181, guid: 6ac0a7b5549c012499485b012ead4f9a, type: 3}
     - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -104,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200980, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_Offset.x
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200980, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_Offset.y
@@ -112,7 +116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: Name
-      value: Gen_An
+      value: SwordMan
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: _name
@@ -140,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: moveSpeed
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: attackDelay

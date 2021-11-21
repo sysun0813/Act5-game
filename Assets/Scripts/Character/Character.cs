@@ -21,15 +21,33 @@ public class Character : MonoBehaviour
 
     public float attackRange;
 
-    public void MoveCharacter(bool isPlayer)
+    [Header("플레이어 캐릭터인지 확인")]
+    public bool isPlayerCharacter;
+
+    [Header("타겟 캐릭터")]
+    protected Character targetCharacter;
+
+    public void MoveCharacter()
     {
-        if(isPlayer)
+        if(isPlayerCharacter)
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime; 
         }
         else
         {
             transform.position -= (Vector3.right * moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void Attack(Character target)
+    {
+        target.currentHP -= attackPower - target.defense;
+        Debug.Log($"{target}이 {name}에게 {attackPower - target.defense}의 데미지를 받음");
+
+        if(target.currentHP <= 0)
+        {
+            target.gameObject.SetActive(false);
+            targetCharacter = null;
         }
     }
 }

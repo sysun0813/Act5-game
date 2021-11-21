@@ -119,8 +119,9 @@ MonoBehaviour:
   attackPower: 20
   defense: 5
   attackDelay: 2.5
-  moveSpeed: 3
+  moveSpeed: 10
   attackRange: 1.5
+  isPlayerCharacter: 1
 --- !u!95 &7615253967271136353
 Animator:
   serializedVersion: 3
