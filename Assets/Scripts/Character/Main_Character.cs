@@ -47,7 +47,7 @@ public class Main_Character : Character
                 try
                 {
                     targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
-                    AttackEnemy();
+                    PlayAttackAnim();
 
                 }
                 catch
@@ -60,7 +60,7 @@ public class Main_Character : Character
             if (!isAttack && targetCharacter != null)
             {
                 isAttack = true;
-                Invoke("AttackEnemy", attackDelay);
+                Invoke("PlayAttackAnim", attackDelay);
             }
         }
         else
@@ -70,15 +70,18 @@ public class Main_Character : Character
 
             MoveCharacter();
 
-            CancelInvoke("AttackEnemy");
+            CancelInvoke("PlayAttackAnim");
         }
     }
 
-    private void AttackEnemy()
+    private void PlayAttackAnim()
     {
         anim.SetTrigger("Attack");
-        Attack(targetCharacter);
         isAttack = false;
+    }
+    public void AttackTarget()
+    {
+        Attack(targetCharacter);
     }
 
     private void OnDrawGizmos()

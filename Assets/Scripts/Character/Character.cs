@@ -27,6 +27,9 @@ public class Character : MonoBehaviour
     [Header("타겟 캐릭터")]
     protected Character targetCharacter;
 
+    [Header("피격 이팩트")]
+    public Animator hitEffect;
+
     public void MoveCharacter()
     {
         if(isPlayerCharacter)
@@ -42,6 +45,8 @@ public class Character : MonoBehaviour
     public void Attack(Character target)
     {
         target.currentHP -= attackPower - target.defense;
+
+        target.hitEffect.SetTrigger("Hit");
         Debug.Log($"{target}이 {name}에게 {attackPower - target.defense}의 데미지를 받음");
 
         if(target.currentHP <= 0)
@@ -50,4 +55,5 @@ public class Character : MonoBehaviour
             targetCharacter = null;
         }
     }
+
 }
