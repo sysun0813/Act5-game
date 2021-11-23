@@ -8,6 +8,9 @@ public class StageManager : MonoBehaviour
 
     [SerializeField] EnemySpawner enemySpawner;
 
+
+
+
     public float enemyspawnDelay;
 
     public List<Enemy> enemies;
@@ -33,6 +36,7 @@ public class StageManager : MonoBehaviour
         StartCoroutine(StartSpawn());
     }
 
+    // EndStage ÇÔ¼ö
     void ReStartStage()
     {
         while(currentPlayers.Count > 0)
@@ -48,21 +52,18 @@ public class StageManager : MonoBehaviour
     {
         while(enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
         {
-            if (enemyspawnIndex < enemies.Count)
-            {
-                yield return new WaitForSeconds(enemyspawnDelay);
-                enemySpawner.SpawnEnemy(enemies[enemyspawnIndex]);
-                enemyspawnIndex++;
-            }
-
-
             if (playerspawnIndex < players.Count)
             {
                 yield return new WaitForSeconds(playerspawnDelay);
                 currentPlayers.Add(playerSpawner.SpawnPlayer(players[playerspawnIndex]));
                 playerspawnIndex++;
             }
-
+            if (enemyspawnIndex < enemies.Count)
+            {
+                yield return new WaitForSeconds(enemyspawnDelay);
+                enemySpawner.SpawnEnemy(enemies[enemyspawnIndex]);
+                enemyspawnIndex++;
+            }
         }
     }
 

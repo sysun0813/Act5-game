@@ -8,8 +8,7 @@ public class EndStage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        //Debug.Log("와");
+        // 마지막 지점에 도달하면 이벤트 발생
         OnEndStage();
     }
 }
