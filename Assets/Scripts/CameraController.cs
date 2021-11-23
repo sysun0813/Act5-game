@@ -31,13 +31,15 @@ public class CameraController : MonoBehaviour
             targetTransform = stageManager.currentPlayers[0].transform;
 
         }
+        if (targetTransform != null)
+        {
+            Vector3 desiredPosition = new Vector3(
+                Mathf.Clamp(targetTransform.position.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),
+                transform.position.y,
+                -10f);
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
 
-        Vector3 desiredPosition = new Vector3(
-            Mathf.Clamp(targetTransform.position.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),
-            transform.position.y,
-            -10f);
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
-
+        }
     }
 
     private void OnDrawGizmos()

@@ -89,4 +89,7 @@ public class Main_Character : Character
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);
     }
+
+
+    
 }

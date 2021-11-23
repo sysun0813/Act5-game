@@ -70,19 +70,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3291554596390910454, guid: 6f10f82728aafb740ac3e83fdeed0670, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6926048194970675157, guid: 6f10f82728aafb740ac3e83fdeed0670, type: 3}
       propertyPath: m_Name
       value: HitEffect
       objectReference: {fileID: 0}
     - target: {fileID: 6926048194970675157, guid: 6f10f82728aafb740ac3e83fdeed0670, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f10f82728aafb740ac3e83fdeed0670, type: 3}
---- !u!95 &2209098377010583381 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1011745942285916825, guid: 6f10f82728aafb740ac3e83fdeed0670, type: 3}
+--- !u!1 &8123507417545239065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6926048194970675157, guid: 6f10f82728aafb740ac3e83fdeed0670, type: 3}
   m_PrefabInstance: {fileID: 1198585150078619084}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9182401655256813261
@@ -161,8 +165,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4189619276563519181, guid: 6ac0a7b5549c012499485b012ead4f9a, type: 3}
     - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279268270125200971, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 878522143
       objectReference: {fileID: 0}
     - target: {fileID: 7279268270125200980, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: m_Radius
@@ -211,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: hitEffect
       value: 
-      objectReference: {fileID: 2209098377010583381}
+      objectReference: {fileID: 8123507417545239065}
     - target: {fileID: 7279268270125200981, guid: 9f58a7fdd285ef74a9bd755aad84fffb, type: 3}
       propertyPath: moveSpeed
       value: 9

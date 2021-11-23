@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
+    [SerializeField] EndStage endStage;
+
     [SerializeField] EnemySpawner enemySpawner;
 
     public float enemyspawnDelay;
 
-    public List<GameObject> enemies;
+    public List<Enemy> enemies;
 
     int enemyspawnIndex;
 
@@ -18,18 +20,30 @@ public class StageManager : MonoBehaviour
     
     public float playerspawnDelay;
 
-    public List<GameObject> players;
+    public List<Main_Character> players;
     
-    public List<GameObject> currentPlayers;
+    public List<Main_Character> currentPlayers;
 
     public int playerspawnIndex;
 
 
     private void Start()
     {
+        endStage.OnEndStage += ReStartStage;
         StartCoroutine(StartSpawn());
     }
 
+    void ReStartStage()
+    {
+        while(currentPlayers.Count > 0)
+        {
+            Destroy(currentPlayers[0].gameObject);
+            currentPlayers.RemoveAt(0);
+        }
+        playerspawnIndex = 0;
+        enemyspawnIndex = 0;
+        StartCoroutine(StartSpawn());
+    }
     IEnumerator StartSpawn()
     {
         while(enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
@@ -51,4 +65,6 @@ public class StageManager : MonoBehaviour
 
         }
     }
+
+    
 }

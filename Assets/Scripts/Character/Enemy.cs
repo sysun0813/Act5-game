@@ -33,7 +33,8 @@ public class Enemy : Character
                 }
                 catch
                 {
-
+                    targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
+                    PlayAttackAnim();
                 }
             }
 
