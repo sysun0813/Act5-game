@@ -30,7 +30,12 @@ public class Character : MonoBehaviour
     [Header("««∞› ¿Ã∆—∆Æ")]
     public GameObject hitEffect;
 
+    public Animator anim;
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     public void MoveCharacter()
     {

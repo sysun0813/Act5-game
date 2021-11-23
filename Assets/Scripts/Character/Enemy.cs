@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    // 애니메이터
-    Animator anim;
 
     CircleCollider2D circleCollider;
 
@@ -33,8 +31,7 @@ public class Enemy : Character
                 }
                 catch
                 {
-                    targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("PlayerCharacter"))[0].GetComponent<Main_Character>();
-                    PlayAttackAnim();
+                    Debug.Log("뭐야 이 새끼는");
                 }
             }
 
@@ -64,6 +61,7 @@ public class Enemy : Character
 
     public void AttackTarget()
     {
+        targetCharacter.anim.SetTrigger("Hit");
         Attack(targetCharacter);
     }
 

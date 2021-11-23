@@ -7,8 +7,6 @@ public class Main_Character : Character
 {
     CircleCollider2D circleCollider;
 
-    Animator anim;
-
     bool isAttack;
 
 
@@ -81,6 +79,7 @@ public class Main_Character : Character
     }
     public void AttackTarget()
     {
+        targetCharacter.anim.SetTrigger("Hit");
         Attack(targetCharacter);
     }
 
