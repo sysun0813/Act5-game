@@ -21,6 +21,15 @@ public class Character : MonoBehaviour
 
     public float attackRange;
 
+
+    //체력바
+    /*public GameObject prfHpbar;
+    public GameObject canvas;
+
+    RectTransform hpBar;
+    public float height = 1.7f;
+    */
+
     [Header("플레이어 캐릭터인지 확인")]
     public bool isPlayerCharacter;
 
@@ -34,7 +43,15 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
+        /*canvas = GameObject.Find("Canvas");
+        hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();*/
         anim = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        /*Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0));
+        hpBar.position = _hpbarPos;*/
     }
 
     public void MoveCharacter()
@@ -59,6 +76,7 @@ public class Character : MonoBehaviour
         if(target.currentHP <= 0)
         {
             target.gameObject.SetActive(false);
+            //GameObject.Find("SwordMan(Clone)").GetComponent<Enemy>().Destroybar();
             targetCharacter = null;
         }
     }

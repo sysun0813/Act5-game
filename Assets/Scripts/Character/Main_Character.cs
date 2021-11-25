@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Main_Character : Character
 {
@@ -10,16 +10,35 @@ public class Main_Character : Character
     bool isAttack;
 
 
+    public GameObject prfHpbar;
+    public GameObject canvas;
+
+    RectTransform hpBar;
+    private float height = 1f;
+
+    Image nowHPbar;
+
     private void Start()
     {
+        canvas = GameObject.Find("Canvas");
+        hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         circleCollider = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
         currentHP = maxHP;
+        nowHPbar = hpBar.transform.GetChild(0).GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x-0.5f, transform.position.y + height, 0));
+        hpBar.position = _hpbarPos;
+        nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
+
+        if (currentHP <= 0)
+        {
+            Destroy(hpBar.gameObject);
+        }
         //if(!(Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
         //{
         //    isAttack = false;

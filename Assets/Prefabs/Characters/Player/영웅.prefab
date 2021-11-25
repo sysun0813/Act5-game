@@ -117,13 +117,16 @@ MonoBehaviour:
   Name: Hero
   maxHP: 100
   currentHP: 100
-  attackPower: 20
+  attackPower: 50
   defense: 5
   attackDelay: 2.5
   moveSpeed: 10
   attackRange: 1.5
   isPlayerCharacter: 1
   hitEffect: {fileID: 7197908196529670847}
+  anim: {fileID: 0}
+  prfHpbar: {fileID: 8756962171001504133, guid: f39cc96a36ca24846a4d27d50a60504c, type: 3}
+  canvas: {fileID: 0}
 --- !u!95 &7615253967271136353
 Animator:
   serializedVersion: 3

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : Character
 {
@@ -9,16 +10,40 @@ public class Enemy : Character
 
     bool isAttack;
 
+    public GameObject prfHpbar;
+    public GameObject canvas;
+
+    RectTransform hpBar;
+    private float height = 0.8f;
+
+    Image nowHPbar;
+
+    //private float epower;
+
 
     private void Start()
     {
+        //epower = GameObject.Find("¿µ¿õ(Clone)").GetComponent<Main_Character>().attackPower;
+        canvas = GameObject.Find("Canvas");
+        hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         anim = GetComponent<Animator>();
         circleCollider = GetComponent<CircleCollider2D>();
         currentHP = maxHP;
+        nowHPbar= hpBar.transform.GetChild(0).GetComponent<Image>();
     }
 
     private void Update()
     {
+        Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x+0.5f, transform.position.y + height, 0));
+        hpBar.position = _hpbarPos;
+        nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
+
+        if (currentHP <= 0)
+        {
+            Destroybar();
+        }
+
+
         if ((Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("PlayerCharacter"))))
         {
             if(targetCharacter == null)
@@ -63,11 +88,21 @@ public class Enemy : Character
     {
         targetCharacter.anim.SetTrigger("Hit");
         Attack(targetCharacter);
+        /*if (currentHP <= epower)
+        {
+            Destroybar();
+        }*/
     }
 
-    private void OnDrawGizmos()
+    public void Destroybar()
+    {
+        nowHPbar.gameObject.SetActive(false);
+        hpBar.gameObject.SetActive(false);
+    }
+
+    /*private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);
-    }
+    }*/
 }
