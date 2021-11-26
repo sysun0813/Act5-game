@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: b5ec4b02a6a6d404fb20f781d8d12d88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 831801160301939623
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_0
+  - first:
+      213: -4029229775948992560
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_1
+  - first:
+      213: 1240688138936698118
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_2
+  - first:
+      213: 6938109988694722845
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_3
+  - first:
+      213: -2139575580451954065
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_4
+  - first:
+      213: 8863517800256286328
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_5
+  - first:
+      213: -10497032100130309
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_6
+  - first:
+      213: 8501617083680899868
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_7
+  - first:
+      213: -148011422570532477
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_8
+  - first:
+      213: 2727456156021417405
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_9
+  - first:
+      213: 5192541805448577089
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_10
+  - first:
+      213: -3750282963350895124
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_11
+  - first:
+      213: -5743130049383390243
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_12
+  - first:
+      213: -8023334130010219321
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_13
+  - first:
+      213: 2682897341742211573
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 658
+        width: 624
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab0e8b8fb62b8b00800000000000000
+      internalID: 831801160301939623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 146
+        width: 624
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df2226dddc4518c0800000000000000
+      internalID: -4029229775948992560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_2
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 760
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605cc56f94fc73110800000000000000
+      internalID: 1240688138936698118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_3
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 670
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d190db8664e194060800000000000000
+      internalID: 6938109988694722845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_4
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 579
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62af057853be42e0800000000000000
+      internalID: -2139575580451954065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_5
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 488
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ea0a87a7a810b70800000000000000
+      internalID: 8863517800256286328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_6
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 398
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1d9724105badff0800000000000000
+      internalID: -10497032100130309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 305
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c134131b1bfcbf570800000000000000
+      internalID: 8501617083680899868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_8
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 217
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381bbf6356822fdf0800000000000000
+      internalID: -148011422570532477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_9
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 130
+        width: 163
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5eb185ceed9d520800000000000000
+      internalID: 2727456156021417405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_10
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 32
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140c023c24d9f0840800000000000000
+      internalID: 5192541805448577089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 17
+        width: 136
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce54542c38154fbc0800000000000000
+      internalID: -3750282963350895124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_12
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 17
+        width: 136
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3a1a306ad4c40b0800000000000000
+      internalID: -5743130049383390243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_13
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 17
+        width: 136
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc19724e1467a090800000000000000
+      internalID: -8023334130010219321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Busy Dojo_14
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 17
+        width: 136
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1626feae09b3520800000000000000
+      internalID: 2682897341742211573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

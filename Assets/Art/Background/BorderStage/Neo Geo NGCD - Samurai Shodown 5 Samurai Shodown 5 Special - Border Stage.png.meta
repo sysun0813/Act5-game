@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: d96ae476426608c48a1ff6fb03c68bcb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8929866422814484170
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_0
+  - first:
+      213: 6787122958844495427
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_1
+  - first:
+      213: -6543727026485648633
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_2
+  - first:
+      213: -1559762324634506730
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_3
+  - first:
+      213: -4358051744811957126
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_4
+  - first:
+      213: -820539732645932500
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_5
+  - first:
+      213: 3332055427065137125
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_6
+  - first:
+      213: -6571226799099274864
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_7
+  - first:
+      213: 8491882364570952261
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_8
+  - first:
+      213: 129258801633013063
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_9
+  - first:
+      213: -2550836685156195078
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_10
+  - first:
+      213: -6430081256067691321
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_11
+  - first:
+      213: -6915100259401757665
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_12
+  - first:
+      213: 1614128728269497279
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_13
+  - first:
+      213: -7843566517453039969
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_14
+  - first:
+      213: 5306677993755096586
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_15
+  - first:
+      213: -5677003985407405683
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_16
+  - first:
+      213: -6610192514235468739
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_17
+  - first:
+      213: 4506450971745494125
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_18
+  - first:
+      213: -2840013640452615129
+    second: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1226
+        width: 640
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63954780dcdb21480800000000000000
+      internalID: -8929866422814484170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 918
+        width: 640
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34603d01f54b03e50800000000000000
+      internalID: 6787122958844495427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 855
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703233780f20035a0800000000000000
+      internalID: -6543727026485648633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_3
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 855
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a6f120e6c9a5ae0800000000000000
+      internalID: -1559762324634506730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_4
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 855
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7446bd27071583c0800000000000000
+      internalID: -4358051744811957126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 864
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c229b87e57bdc94f0800000000000000
+      internalID: -820539732645932500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_6
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 863
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e74126c1c6dd3e20800000000000000
+      internalID: 3332055427065137125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_7
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 863
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0991925ca005ec4a0800000000000000
+      internalID: -6571226799099274864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 758
+        width: 130
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542e7a6c40a39d570800000000000000
+      internalID: 8491882364570952261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 758
+        width: 130
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dad6bf1383bc100800000000000000
+      internalID: 129258801633013063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_10
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 758
+        width: 130
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4ea3dbc8b999cd0800000000000000
+      internalID: -2550836685156195078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_11
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 757
+        width: 130
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc00376a23c3c6a0800000000000000
+      internalID: -6430081256067691321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 661
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c852ca3f0a800a0800000000000000
+      internalID: -6915100259401757665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 568
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3a14eb689866610800000000000000
+      internalID: 1614128728269497279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_14
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 474
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9650133fcd062390800000000000000
+      internalID: -7843566517453039969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 380
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06b723f48b15a940800000000000000
+      internalID: 5306677993755096586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 285
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81905d04fa3731b0800000000000000
+      internalID: -5677003985407405683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_17
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 191
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d347c0c3ee0e344a0800000000000000
+      internalID: -6610192514235468739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_18
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 98
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64aa9858412a8e30800000000000000
+      internalID: 4506450971745494125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Samurai Shodown 5 Samurai Shodown 5 Special - Border Stage_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 4
+        width: 230
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724de8b14ae3698d0800000000000000
+      internalID: -2840013640452615129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

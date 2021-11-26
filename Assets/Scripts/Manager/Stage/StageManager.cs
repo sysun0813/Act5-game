@@ -49,7 +49,7 @@ public class StageManager : MonoBehaviour
         enemyspawnIndex = 0;
 
         fadeAnim.SetTrigger("FadeOut");
-        StartCoroutine(FadeStage());
+        StartCoroutine(ChangeStage());
         
     }
     IEnumerator StartSpawn()
@@ -71,7 +71,7 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    IEnumerator FadeStage()
+    IEnumerator ChangeStage()
     {
         yield return new WaitForSeconds(1f);
         cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
