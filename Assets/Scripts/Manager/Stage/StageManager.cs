@@ -6,11 +6,12 @@ public class StageManager : MonoBehaviour
 {
     [SerializeField] EndStage endStage;
 
+    [SerializeField] CameraController cameraController;
+
+    [SerializeField] Animator fadeAnim;
+
+
     [SerializeField] EnemySpawner enemySpawner;
-
-
-
-
     public float enemyspawnDelay;
 
     public List<Enemy> enemies;
@@ -46,11 +47,14 @@ public class StageManager : MonoBehaviour
         }
         playerspawnIndex = 0;
         enemyspawnIndex = 0;
-        StartCoroutine(StartSpawn());
+
+        fadeAnim.SetTrigger("FadeOut");
+        StartCoroutine(FadeStage());
+        
     }
     IEnumerator StartSpawn()
     {
-        while(enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
+        while (enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
         {
             if (playerspawnIndex < players.Count)
             {
@@ -67,5 +71,11 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    
+    IEnumerator FadeStage()
+    {
+        yield return new WaitForSeconds(1f);
+        cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
+        fadeAnim.SetTrigger("FadeIn");
+        yield return StartCoroutine(StartSpawn());
+    }
 }
