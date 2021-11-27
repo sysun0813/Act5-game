@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Main_Character : Character
 {
-    CircleCollider2D circleCollider;
+    [SerializeField] CircleCollider2D circleCollider;
 
     bool isAttack;
 
@@ -22,7 +22,6 @@ public class Main_Character : Character
     {
         canvas = GameObject.Find("Canvas");
         hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
-        circleCollider = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
         currentHP = maxHP;
         nowHPbar = hpBar.transform.GetChild(0).GetComponent<Image>();
@@ -39,24 +38,6 @@ public class Main_Character : Character
         {
             Destroy(hpBar.gameObject);
         }
-        //if(!(Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
-        //{
-        //    isAttack = false;
-        //    MoveCharacter();
-        //    anim.SetBool("IsMove", true);
-        //    CancelInvoke("AttackEnemy");
-        //}
-        //else
-        //{
-        //    targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
-        //    if (!isAttack)
-        //    {
-        //        isAttack = true;
-        //        Invoke("AttackEnemy", attackDelay);
-        //    }
-        //    anim.SetBool("IsMove", false);
-
-        //}
         if ((Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
         {
             if (targetCharacter == null)
@@ -102,7 +83,7 @@ public class Main_Character : Character
         Attack(targetCharacter);
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);

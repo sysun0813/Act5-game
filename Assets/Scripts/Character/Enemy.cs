@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy : Character
 {
 
-    CircleCollider2D circleCollider;
+    [SerializeField] CircleCollider2D circleCollider;
 
     bool isAttack;
 
@@ -27,7 +27,6 @@ public class Enemy : Character
         canvas = GameObject.Find("Canvas");
         hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         anim = GetComponent<Animator>();
-        circleCollider = GetComponent<CircleCollider2D>();
         currentHP = maxHP;
         nowHPbar= hpBar.transform.GetChild(0).GetComponent<Image>();
     }
@@ -100,9 +99,9 @@ public class Enemy : Character
         hpBar.gameObject.SetActive(false);
     }
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);
-    }*/
+    }
 }

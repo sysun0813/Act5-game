@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 878522143
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -5414630827966485006, guid: 4b7af295b52f3504ea62544d0c38f5ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,17 +114,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d3ec185978c584ba0b187dc016659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Hero
+  Name: Haohmaru
   maxHP: 100
   currentHP: 100
   attackPower: 50
   defense: 5
   attackDelay: 2.5
   moveSpeed: 10
-  attackRange: 1.5
+  attackRange: 2.5
   isPlayerCharacter: 1
   hitEffect: {fileID: 7197908196529670847}
   anim: {fileID: 0}
+  circleCollider: {fileID: 5867276503401642663}
   prfHpbar: {fileID: 8756962171001504133, guid: f39cc96a36ca24846a4d27d50a60504c, type: 3}
   canvas: {fileID: 0}
 --- !u!95 &7615253967271136353
