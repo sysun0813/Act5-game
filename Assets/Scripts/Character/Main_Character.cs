@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Main_Character : Character
 {
-    [SerializeField] CircleCollider2D circleCollider;
+    [SerializeField] BoxCollider2D boxCollider;
 
     bool isAttack;
 
@@ -38,7 +38,7 @@ public class Main_Character : Character
         {
             Destroy(hpBar.gameObject);
         }
-        if ((Physics2D.OverlapCircle(circleCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
+        if ((Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
         {
             if (targetCharacter == null)
             {
@@ -86,7 +86,7 @@ public class Main_Character : Character
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(circleCollider.bounds.center, attackRange);
+        Gizmos.DrawWireSphere(boxCollider.bounds.center, attackRange);
     }
 
 

@@ -10,7 +10,7 @@ public class StageManager : MonoBehaviour
 
     [SerializeField] Animator fadeAnim;
 
-
+    [Header("적 스포너")]
     [SerializeField] EnemySpawner enemySpawner;
     public float enemyspawnDelay;
 
@@ -19,7 +19,7 @@ public class StageManager : MonoBehaviour
     int enemyspawnIndex;
 
 
-
+    [Header("플레이어 스포너")]
     [SerializeField] PlayerSpawner playerSpawner;
     
     public float playerspawnDelay;
@@ -30,6 +30,22 @@ public class StageManager : MonoBehaviour
 
     public int playerspawnIndex;
 
+    [Space(30f)]
+
+    [Header("맵")]
+    [SerializeField] List<GameObject> maps;
+
+    [Header("적 캐릭터")]
+    [SerializeField] List<Enemy> easyEnemies;
+    [SerializeField] List<Enemy> normalEnemies;
+    //[SerializeField] List<Enemy> hardEnemies;
+
+    int currentStage = 1;
+
+    StageInformation previousStageInfo;
+    StageInformation currentStageInfo;
+    StageInformation nextStageInfo;
+    StageInformation returnStageInfo;
 
     private void Start()
     {
@@ -78,4 +94,23 @@ public class StageManager : MonoBehaviour
         fadeAnim.SetTrigger("FadeIn");
         yield return StartCoroutine(StartSpawn());
     }
+
+    StageInformation MakeStage()
+    {
+        StageInformation stage = new StageInformation
+        {
+        };
+        return stage;
+    }
+
+    void GetEnemies()
+    {
+
+    }
+}
+
+public class StageInformation
+{
+    public GameObject map;
+    public List<Enemy> enemies;
 }
