@@ -14,4 +14,6 @@ public class EnemySpawner : MonoBehaviour
         enemy.hitEffect.GetComponent<SpriteRenderer>().sortingOrder = enemy.GetComponent<SpriteRenderer>().sortingOrder;
 
     }
+
+    
 }

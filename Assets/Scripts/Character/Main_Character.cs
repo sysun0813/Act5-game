@@ -34,10 +34,7 @@ public class Main_Character : Character
         hpBar.position = _hpbarPos;
         nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
 
-        if (currentHP <= 0)
-        {
-            Destroy(hpBar.gameObject);
-        }
+        
         if ((Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
         {
             if (targetCharacter == null)
@@ -79,7 +76,6 @@ public class Main_Character : Character
     }
     public void AttackTarget()
     {
-        targetCharacter.anim.SetTrigger("Hit");
         Attack(targetCharacter);
     }
 

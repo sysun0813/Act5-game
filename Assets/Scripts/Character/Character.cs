@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
     public bool isPlayerCharacter;
 
     [Header("타겟 캐릭터")]
-    protected Character targetCharacter;
+    [SerializeField] protected Character targetCharacter;
 
     [Header("피격 이팩트")]
     public GameObject hitEffect;
@@ -68,14 +68,15 @@ public class Character : MonoBehaviour
 
     public void Attack(Character target)
     {
+        target.anim.SetTrigger("Hit");
+
         target.currentHP -= attackPower - target.defense;
 
         target.hitEffect.SetActive(true);
-        Debug.Log($"{target}이 {name}에게 {attackPower - target.defense}의 데미지를 받음");
 
         if(target.currentHP <= 0)
         {
-            target.gameObject.SetActive(false);
+            Destroy(target.gameObject);
             //GameObject.Find("SwordMan(Clone)").GetComponent<Enemy>().Destroybar();
             targetCharacter = null;
         }
