@@ -14,4 +14,12 @@ public class PlayerSpawner : MonoBehaviour
 
         return player;
     }
+
+    public void RePositionPlayer(Main_Character player)
+    {
+        float randNum = Random.Range(0f, 1f);
+
+        player.transform.position = transform.position + (Vector3.up * randNum);
+        
+    }
 }

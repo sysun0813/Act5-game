@@ -50,45 +50,93 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
-        endStage.OnEndStage += LoadStage;
+        endStage.OnEndStage += UpdateStage;
 
         currentStageInfo = MakeStage(currentStage);
         nextStageInfo = MakeStage(currentStage + 1);
 
-        StartCoroutine(StartSpawn());
+        LoadStage(currentStageInfo);
+
+        StartCoroutine(SpawnPlayers());
+    }
+
+    void LoadStage(StageInformation stageInfo)
+    {
+        stageInfo.map.SetActive(true);
+        StartCoroutine(SpawnEnemies(stageInfo.enemies));
     }
 
     // EndStage ÇÔ¼ö
-    void LoadStage()
+    void UpdateStage()
     {
-        while(currentPlayers.Count > 0)
+        currentStage++;
+
+        previousStageInfo = currentStageInfo;
+        currentStageInfo = nextStageInfo;
+        nextStageInfo = MakeStage(currentStage + 1);
+
+        for(int i = 0; i < currentPlayers.Count; i++)
         {
-            Destroy(currentPlayers[0].gameObject);
-            currentPlayers.RemoveAt(0);
+            currentPlayers[i].gameObject.SetActive(false);
         }
-        playerspawnIndex = 0;
-        enemyspawnIndex = 0;
+
+        //while(currentPlayers.Count > 0)
+        //{
+        //    Destroy(currentPlayers[0].gameObject);
+        //    currentPlayers.RemoveAt(0);
+        //}
+        //playerspawnIndex = 0;
+        //enemyspawnIndex = 0;
 
         fadeAnim.SetTrigger("FadeOut");
         StartCoroutine(ChangeStage());
         
     }
-    IEnumerator StartSpawn()
+
+    IEnumerator RePositionPlayer()
     {
-        while (enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
+        for (int i = 0; i < currentPlayers.Count; i++)
         {
-            if (playerspawnIndex < players.Count)
-            {
-                yield return new WaitForSeconds(playerspawnDelay);
-                currentPlayers.Add(playerSpawner.SpawnPlayer(players[playerspawnIndex]));
-                playerspawnIndex++;
-            }
-            if (enemyspawnIndex < enemies.Count)
-            {
-                yield return new WaitForSeconds(enemyspawnDelay);
-                enemySpawner.SpawnEnemy(enemies[enemyspawnIndex]);
-                enemyspawnIndex++;
-            }
+            currentPlayers[i].gameObject.SetActive(true);
+            playerSpawner.RePositionPlayer(currentPlayers[i]);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    IEnumerator SpawnPlayers()
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            currentPlayers.Add(playerSpawner.SpawnPlayer(players[i]));
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    //IEnumerator StartSpawn()
+    //{
+    //    while (enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
+    //    {
+    //        if (playerspawnIndex < players.Count)
+    //        {
+    //            yield return new WaitForSeconds(playerspawnDelay);
+    //            currentPlayers.Add(playerSpawner.SpawnPlayer(players[playerspawnIndex]));
+    //            playerspawnIndex++;
+    //        }
+    //        if (enemyspawnIndex < enemies.Count)
+    //        {
+    //            yield return new WaitForSeconds(enemyspawnDelay);
+    //            enemySpawner.SpawnEnemy(enemies[enemyspawnIndex]);
+    //            enemyspawnIndex++;
+    //        }
+    //    }
+    //}
+
+    IEnumerator SpawnEnemies(List<Enemy> enemies)
+    {
+        for(int i = 0; i < enemies.Count; i++)
+        {
+            enemySpawner.SpawnEnemy(enemies[i]);
+            yield return new WaitForSeconds(1f);
         }
     }
 
@@ -96,8 +144,10 @@ public class StageManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
+        previousStageInfo.map.SetActive(false);
+        LoadStage(currentStageInfo);
         fadeAnim.SetTrigger("FadeIn");
-        yield return StartCoroutine(StartSpawn());
+        yield return StartCoroutine(RePositionPlayer());
     }
 
     StageInformation MakeStage(int stageNum)

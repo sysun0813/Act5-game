@@ -16,7 +16,7 @@ public class Referee : MonoBehaviour
     {
         refe = GetComponent<Transform>();
         stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
-        refe.position = new Vector2(cam.position.x + 4f, -2.66f);
+        refe.position = new Vector2(cam.position.x + 4f, transform.position.y);
     }
 
     private void Update()
@@ -24,7 +24,7 @@ public class Referee : MonoBehaviour
         if (stageManager.currentPlayers.Count > 0)
         {
             tf = true;
-            refe.position = new Vector2(stageManager.currentPlayers[0].transform.position.x + 4.0f, -2.66f);
+            refe.position = new Vector2(stageManager.currentPlayers[0].transform.position.x + 4.0f, transform.position.y);
         }
         else if (tf = true && (stageManager.players.Count == 0 || true /*true 대신 아군 깃발 베었는지 참거짓 코드 추가*/ ))
         {
