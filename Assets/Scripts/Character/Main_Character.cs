@@ -35,7 +35,7 @@ public class Main_Character : Character
         nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
 
         
-        if ((Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter"))))
+        if (Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter")))
         {
             if (targetCharacter == null)
             {
@@ -57,6 +57,11 @@ public class Main_Character : Character
                 isAttack = true;
                 Invoke("PlayAttackAnim", attackDelay);
             }
+        }
+        else if(Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone")))
+        {
+            Debug.Log("스테이지 완료");
+            anim.SetBool("IsMove", false);
         }
         else
         {

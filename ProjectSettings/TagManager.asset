@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - EnemyCharacter
-  - 
+  - TeleportStone
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Effect
     uniqueID: 895951693
+    locked: 0
+  - name: TeleportStone
+    uniqueID: 3996729497
     locked: 0
