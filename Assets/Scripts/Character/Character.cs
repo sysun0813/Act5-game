@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [Header("플레이어 캐릭터인지 확인")]
+    public bool isPlayerCharacter;
+
     [Header("캐릭터 스탯")]
     public string Name;
 
@@ -21,6 +24,10 @@ public class Character : MonoBehaviour
 
     public float attackRange;
 
+    [Header("캐릭터 이미지")]
+    public Sprite characterImage;
+
+    public Animator anim;
 
     //체력바
     /*public GameObject prfHpbar;
@@ -30,23 +37,20 @@ public class Character : MonoBehaviour
     public float height = 1.7f;
     */
 
-    [Header("플레이어 캐릭터인지 확인")]
-    public bool isPlayerCharacter;
-
     [Header("타겟 캐릭터")]
     [SerializeField] protected Character targetCharacter;
 
     [Header("피격 이팩트")]
     public GameObject hitEffect;
 
-    public Animator anim;
+    // 정보가 초기화 되었는지 확인
+    [HideInInspector]
+    public bool isInitialize;
 
-
-    private void Start()
+    private void Awake()
     {
         /*canvas = GameObject.Find("Canvas");
         hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();*/
-        anim = GetComponent<Animator>();
     }
 
     private void Update()

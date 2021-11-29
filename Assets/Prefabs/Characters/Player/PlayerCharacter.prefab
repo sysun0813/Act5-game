@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7615253967271136353}
   - component: {fileID: 3767850698244770529}
   m_Layer: 3
-  m_Name: "\uC601\uC6C5"
+  m_Name: PlayerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,18 +181,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d3ec185978c584ba0b187dc016659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Haohmaru
-  maxHP: 100
-  currentHP: 100
-  attackPower: 50
-  defense: 5
-  attackDelay: 1.5
-  moveSpeed: 10
-  attackRange: 2.5
+  Name: 
+  maxHP: 0
+  currentHP: 0
+  attackPower: 0
+  defense: 0
+  attackDelay: 0
+  moveSpeed: 0
+  attackRange: 0
+  characterImage: {fileID: 0}
+  anim: {fileID: 0}
   isPlayerCharacter: 1
   targetCharacter: {fileID: 0}
   hitEffect: {fileID: 7197908196529670847}
-  anim: {fileID: 0}
   boxCollider: {fileID: 3767850698244770529}
   prfHpbar: {fileID: 8756962171001504133, guid: f39cc96a36ca24846a4d27d50a60504c, type: 3}
   canvas: {fileID: 0}

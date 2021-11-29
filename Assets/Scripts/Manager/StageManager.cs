@@ -42,6 +42,7 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
+        // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수 추가
         endStage.OnEndStage += UpdateStage;
 
         currentStageInfo = MakeStage(currentStage);
@@ -49,16 +50,21 @@ public class StageManager : MonoBehaviour
 
         LoadStage(currentStageInfo);
 
+    }
+
+    public void StartSpawn()
+    {
         StartCoroutine(SpawnPlayers());
+        StartCoroutine(SpawnEnemies(currentStageInfo.enemies));
+
     }
 
     void LoadStage(StageInformation stageInfo)
     {
         stageInfo.map.SetActive(true);
-        StartCoroutine(SpawnEnemies(stageInfo.enemies));
     }
 
-    // EndStage 함수
+    // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수
     void UpdateStage()
     {
         currentStage++;
@@ -71,11 +77,14 @@ public class StageManager : MonoBehaviour
         {
             currentPlayers[i].gameObject.SetActive(false);
         }
+
         fadeAnim.SetTrigger("FadeOut");
+
         StartCoroutine(ChangeStage());
     }
 
-    IEnumerator RePositionPlayer()
+    // 플레이어 캐릭터 Stage 시작 지점으로 재위치
+    IEnumerator SetPlayerPosition()
     {
         for (int i = 0; i < currentPlayers.Count; i++)
         {
@@ -85,6 +94,7 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    // 플레이어 캐릭터 생성
     IEnumerator SpawnPlayers()
     {
         for (int i = 0; i < players.Count; i++)
@@ -94,6 +104,7 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    // 적 캐릭터 생성
     IEnumerator SpawnEnemies(List<Enemy> enemies)
     {
         for(int i = 0; i < enemies.Count; i++)
@@ -103,15 +114,19 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    // Stage 교체
     IEnumerator ChangeStage()
     {
         yield return new WaitForSeconds(1f);
         cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
         previousStageInfo.map.SetActive(false);
         LoadStage(currentStageInfo);
+
+        // 응급처치 해놓은 거
         endStage.GetComponent<BoxCollider2D>().enabled = true;
+
         fadeAnim.SetTrigger("FadeIn");
-        yield return StartCoroutine(RePositionPlayer());
+        yield return StartCoroutine(SetPlayerPosition());
     }
 
     StageInformation MakeStage(int stageNum)
