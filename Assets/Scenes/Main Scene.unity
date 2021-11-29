@@ -1630,7 +1630,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.14, y: 6.12}
+  m_Size: {x: 2.5, y: 10.94}
   m_EdgeRadius: 0
 --- !u!4 &1069969132
 Transform:
@@ -2733,17 +2733,8 @@ MonoBehaviour:
   cameraController: {fileID: 323328587}
   fadeAnim: {fileID: 1441970779}
   enemySpawner: {fileID: 1914731881}
-  enemyspawnDelay: 1.5
-  enemies:
-  - {fileID: 1903710147736189080, guid: 77a212776709ccc469f245a20f1148ab, type: 3}
-  - {fileID: 1903710147736189080, guid: 77a212776709ccc469f245a20f1148ab, type: 3}
-  - {fileID: 1903710147736189080, guid: 77a212776709ccc469f245a20f1148ab, type: 3}
-  - {fileID: 1903710147736189080, guid: 77a212776709ccc469f245a20f1148ab, type: 3}
   playerSpawner: {fileID: 1802762002}
-  playerspawnDelay: 1
   players:
-  - {fileID: 5867276503401642680, guid: 7f4e1bfafcd402145a805e3b47e8a583, type: 3}
-  - {fileID: 5867276503401642680, guid: 7f4e1bfafcd402145a805e3b47e8a583, type: 3}
   - {fileID: 5867276503401642680, guid: 7f4e1bfafcd402145a805e3b47e8a583, type: 3}
   currentPlayers: []
   playerspawnIndex: 0

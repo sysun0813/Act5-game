@@ -26,14 +26,14 @@ public class Referee : MonoBehaviour
             tf = true;
             refe.position = new Vector2(stageManager.currentPlayers[0].transform.position.x + 4.0f, transform.position.y);
         }
-        else if (tf = true && (stageManager.players.Count == 0 || true /*true 대신 아군 깃발 베었는지 참거짓 코드 추가*/ ))
-        {
-            //깃발 오른쪽으로 들기
-        }
-        else if (tf = true && (stageManager.enemies.Count == 0 || true /*true 대신 적군 깃발 베었는지 참거짓 코드 추가*/))
-        {
-            //깃발 왼쪽으로 들기
-        }
+        //else if (tf = true && (stageManager.players.Count == 0 || true /*true 대신 아군 깃발 베었는지 참거짓 코드 추가*/ ))
+        //{
+        //    //깃발 오른쪽으로 들기
+        //}
+        //else if (tf = true && (stageManager.current.Count == 0 || true /*true 대신 적군 깃발 베었는지 참거짓 코드 추가*/))
+        //{
+        //    //깃발 왼쪽으로 들기
+        //}
 
         else
         {

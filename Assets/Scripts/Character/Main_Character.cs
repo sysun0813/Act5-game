@@ -43,7 +43,6 @@ public class Main_Character : Character
                 {
                     targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
                     PlayAttackAnim();
-
                 }
                 catch
                 {
@@ -59,9 +58,9 @@ public class Main_Character : Character
             }
         }
         else if(Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone")))
-        {
-            Debug.Log("스테이지 완료");
+        { 
             anim.SetBool("IsMove", false);
+            Physics2D.OverlapCircleAll(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone"))[0].GetComponent<EndStage>().FinishStage();
         }
         else
         {
@@ -79,6 +78,7 @@ public class Main_Character : Character
         anim.SetTrigger("Attack");
         isAttack = false;
     }
+
     public void AttackTarget()
     {
         Attack(targetCharacter);
@@ -89,7 +89,4 @@ public class Main_Character : Character
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(boxCollider.bounds.center, attackRange);
     }
-
-
-    
 }

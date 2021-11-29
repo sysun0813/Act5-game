@@ -41,6 +41,7 @@ public class Character : MonoBehaviour
 
     public Animator anim;
 
+
     private void Start()
     {
         /*canvas = GameObject.Find("Canvas");

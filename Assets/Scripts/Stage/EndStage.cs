@@ -5,10 +5,22 @@ using System;
 public class EndStage : MonoBehaviour
 {
     public event Action OnEndStage;
+    Animator anim;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Awake()
     {
-        // 마지막 지점에 도달하면 이벤트 발생
+        anim = GetComponent<Animator>();
+    }
+
+
+    public void FinishStage()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+        anim.SetTrigger("Teleport");
+    }
+    
+    public void EndTeleportAnim()
+    {
         OnEndStage();
     }
 }

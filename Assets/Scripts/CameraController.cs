@@ -29,7 +29,6 @@ public class CameraController : MonoBehaviour
         if (stageManager.currentPlayers.Count > 0)
         {
             targetTransform = stageManager.currentPlayers[0].transform;
-
         }
         if (targetTransform != null)
         {

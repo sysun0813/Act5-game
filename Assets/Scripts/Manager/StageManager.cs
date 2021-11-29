@@ -12,17 +12,9 @@ public class StageManager : MonoBehaviour
 
     [Header("적 스포너")]
     [SerializeField] EnemySpawner enemySpawner;
-    public float enemyspawnDelay;
-
-    public List<Enemy> enemies;
-
-    int enemyspawnIndex;
-
-
+    
     [Header("플레이어 스포너")]
     [SerializeField] PlayerSpawner playerSpawner;
-    
-    public float playerspawnDelay;
 
     public List<Main_Character> players;
     
@@ -79,18 +71,8 @@ public class StageManager : MonoBehaviour
         {
             currentPlayers[i].gameObject.SetActive(false);
         }
-
-        //while(currentPlayers.Count > 0)
-        //{
-        //    Destroy(currentPlayers[0].gameObject);
-        //    currentPlayers.RemoveAt(0);
-        //}
-        //playerspawnIndex = 0;
-        //enemyspawnIndex = 0;
-
         fadeAnim.SetTrigger("FadeOut");
         StartCoroutine(ChangeStage());
-        
     }
 
     IEnumerator RePositionPlayer()
@@ -112,25 +94,6 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    //IEnumerator StartSpawn()
-    //{
-    //    while (enemyspawnIndex < enemies.Count||playerspawnIndex<players.Count)
-    //    {
-    //        if (playerspawnIndex < players.Count)
-    //        {
-    //            yield return new WaitForSeconds(playerspawnDelay);
-    //            currentPlayers.Add(playerSpawner.SpawnPlayer(players[playerspawnIndex]));
-    //            playerspawnIndex++;
-    //        }
-    //        if (enemyspawnIndex < enemies.Count)
-    //        {
-    //            yield return new WaitForSeconds(enemyspawnDelay);
-    //            enemySpawner.SpawnEnemy(enemies[enemyspawnIndex]);
-    //            enemyspawnIndex++;
-    //        }
-    //    }
-    //}
-
     IEnumerator SpawnEnemies(List<Enemy> enemies)
     {
         for(int i = 0; i < enemies.Count; i++)
@@ -146,6 +109,7 @@ public class StageManager : MonoBehaviour
         cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
         previousStageInfo.map.SetActive(false);
         LoadStage(currentStageInfo);
+        endStage.GetComponent<BoxCollider2D>().enabled = true;
         fadeAnim.SetTrigger("FadeIn");
         yield return StartCoroutine(RePositionPlayer());
     }

@@ -157,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 878522143
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5414630827966485006, guid: 4b7af295b52f3504ea62544d0c38f5ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -186,10 +186,11 @@ MonoBehaviour:
   currentHP: 100
   attackPower: 50
   defense: 5
-  attackDelay: 2.5
+  attackDelay: 1.5
   moveSpeed: 10
   attackRange: 2.5
   isPlayerCharacter: 1
+  targetCharacter: {fileID: 0}
   hitEffect: {fileID: 7197908196529670847}
   anim: {fileID: 0}
   boxCollider: {fileID: 3767850698244770529}
