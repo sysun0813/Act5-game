@@ -12,4 +12,8 @@ public class GameManager : MonoBehaviour
 
     int activePlayerCharacterCount = 1;
 
+    private void Start()
+    {
+        characterManager.InitializeCharacter(playerCharacters[0], "Haohmaru");
+    }
 }
