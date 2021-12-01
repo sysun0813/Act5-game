@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    [SerializeField] EndStage endStage;
+    [SerializeField] EndOfStage endOfStage;
 
     [SerializeField] CameraController cameraController;
 
@@ -15,12 +15,6 @@ public class StageManager : MonoBehaviour
     
     [Header("플레이어 스포너")]
     [SerializeField] PlayerSpawner playerSpawner;
-
-    public List<Main_Character> players;
-    
-    public List<Main_Character> currentPlayers;
-
-    public int playerspawnIndex;
 
     [Space(30f)]
 
@@ -33,7 +27,7 @@ public class StageManager : MonoBehaviour
     //[SerializeField] List<Enemy> hardEnemies;
     [SerializeField] List<Enemy> bossEnemies;
 
-    int currentStage = 1;
+    int stageNum = 1;
 
     [SerializeField] StageInformation previousStageInfo;
     [SerializeField] StageInformation currentStageInfo;
@@ -43,63 +37,87 @@ public class StageManager : MonoBehaviour
     private void Start()
     {
         // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수 추가
-        endStage.OnEndStage += UpdateStage;
+        endOfStage.OnFinishStage += StageResult;
 
-        currentStageInfo = MakeStage(currentStage);
-        nextStageInfo = MakeStage(currentStage + 1);
 
-        LoadStage(currentStageInfo);
+    }
 
+    public void StartStage(List<Main_Character> playerCharacters)
+    {
+        LoadStage();
+        StartCoroutine(SetPlayerPosition(playerCharacters));
+    }
+
+    public void InitStage(bool won)
+    {
+        if(currentStageInfo.map == null)
+        {
+            Debug.Log("ㅇ");
+            currentStageInfo = MakeStageInfo(stageNum);
+            nextStageInfo = MakeStageInfo(stageNum + 1);
+        }
+        else
+        {
+            if(won)
+            {
+                previousStageInfo = currentStageInfo;
+                currentStageInfo = nextStageInfo;
+                nextStageInfo = MakeStageInfo(stageNum + 1);
+            }
+            else
+            {
+                nextStageInfo = currentStageInfo;
+                currentStageInfo = previousStageInfo;
+                previousStageInfo = MakeStageInfo(stageNum - 1);
+            }
+            
+        }
+    }
+
+    public void LoadStage()
+    {
+        if (stageNum > 1)
+        {
+            previousStageInfo.map.SetActive(false);
+        }
+        currentStageInfo.map.SetActive(true);
+        fadeAnim.SetTrigger("FadeIn");
+    }
+
+    // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수
+    void StageResult()
+    {
+        fadeAnim.SetTrigger("FadeOut");
+        FinishStage(true);
+    }
+
+    void FinishStage(bool won)
+    {
+        if(won)
+        {
+            stageNum++;
+        }
+        else
+        {
+            stageNum--;
+        }
+        GameManager.Instance.ProgressStage(won);
     }
 
     public void StartSpawn()
     {
-        StartCoroutine(SpawnPlayers());
         StartCoroutine(SpawnEnemies(currentStageInfo.enemies));
 
     }
 
-    void LoadStage(StageInformation stageInfo)
-    {
-        stageInfo.map.SetActive(true);
-    }
-
-    // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수
-    void UpdateStage()
-    {
-        currentStage++;
-
-        previousStageInfo = currentStageInfo;
-        currentStageInfo = nextStageInfo;
-        nextStageInfo = MakeStage(currentStage + 1);
-
-        for(int i = 0; i < currentPlayers.Count; i++)
-        {
-            currentPlayers[i].gameObject.SetActive(false);
-        }
-
-        fadeAnim.SetTrigger("FadeOut");
-
-        StartCoroutine(ChangeStage());
-    }
 
     // 플레이어 캐릭터 Stage 시작 지점으로 재위치
-    IEnumerator SetPlayerPosition()
+    public IEnumerator SetPlayerPosition(List<Main_Character> characters)
     {
-        for (int i = 0; i < currentPlayers.Count; i++)
+        for (int i = 0; i < characters.Count; i++)
         {
-            currentPlayers[i].gameObject.SetActive(true);
-            playerSpawner.RePositionPlayer(currentPlayers[i]);
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
-    // 플레이어 캐릭터 생성
-    IEnumerator SpawnPlayers()
-    {
-        for (int i = 0; i < players.Count; i++)
-        {
-            currentPlayers.Add(playerSpawner.SpawnPlayer(players[i]));
+            characters[i].gameObject.SetActive(true);
+            playerSpawner.RePositionPlayer(characters[i]);
             yield return new WaitForSeconds(1f);
         }
     }
@@ -119,17 +137,17 @@ public class StageManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
-        previousStageInfo.map.SetActive(false);
-        LoadStage(currentStageInfo);
+        //previousStageInfo.map.SetActive(false);
+        LoadStage();
 
         // 응급처치 해놓은 거
-        endStage.GetComponent<BoxCollider2D>().enabled = true;
+        endOfStage.GetComponent<BoxCollider2D>().enabled = true;
 
         fadeAnim.SetTrigger("FadeIn");
-        yield return StartCoroutine(SetPlayerPosition());
+        //yield return StartCoroutine(SetPlayerPosition());
     }
 
-    StageInformation MakeStage(int stageNum)
+    StageInformation MakeStageInfo(int stageNum)
     {
         StageInformation stage = new StageInformation
         {

@@ -57,11 +57,11 @@ public class Main_Character : Character
                 Invoke("PlayAttackAnim", attackDelay);
             }
         }
-        else if(Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone")))
-        { 
-            anim.SetBool("IsMove", false);
-            Physics2D.OverlapCircleAll(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone"))[0].GetComponent<EndStage>().FinishStage();
-        }
+        //else if(Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone")))
+        //{ 
+        //    anim.SetBool("IsMove", false);
+        //    Physics2D.OverlapCircleAll(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone"))[0].GetComponent<EndStage>().FinishStage();
+        //}
         else
         {
             isAttack = false;
@@ -88,5 +88,15 @@ public class Main_Character : Character
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(boxCollider.bounds.center, attackRange);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Teleporter"))
+        {
+            Debug.Log("D");
+
+            collision.GetComponent<EndOfStage>().anim.SetTrigger("Teleport");
+        }
     }
 }

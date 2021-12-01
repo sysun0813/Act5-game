@@ -26,10 +26,10 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (stageManager.currentPlayers.Count > 0)
-        {
-            targetTransform = stageManager.currentPlayers[0].transform;
-        }
+        //if (stageManager.currentPlayers.Count > 0)
+        //{
+        //    targetTransform = stageManager.currentPlayers[0].transform;
+        //}
         if (targetTransform != null)
         {
             Vector3 desiredPosition = new Vector3(

@@ -10,19 +10,28 @@ public class CharacterManager : MonoBehaviour
 
     public Main_Character InitializeCharacter(Main_Character characterSlot, string characterName)
     {
-        Main_Character character = characterList.GetCharacter(characterName);
-        characterSlot.Name = character.Name;
-        characterSlot.maxHP = character.maxHP;
-        characterSlot.attackPower = character.attackPower;
-        characterSlot.defense = character.defense;
-        characterSlot.attackDelay = character.attackDelay;
-        characterSlot.moveSpeed = character.moveSpeed;
-        characterSlot.attackRange = character.attackRange;
+        if (!characterSlot.isInitialize)
+        {
 
-        characterSlot.GetComponent<SpriteRenderer>().sprite = character.characterImage;
-        characterSlot.GetComponent<Animator>().runtimeAnimatorController = character.anim.runtimeAnimatorController;
-        characterSlot.gameObject.SetActive(true);
+            Main_Character character = characterList.GetCharacter(characterName);
+            characterSlot.Name = character.Name;
+            characterSlot.maxHP = character.maxHP;
+            characterSlot.attackPower = character.attackPower;
+            characterSlot.defense = character.defense;
+            characterSlot.attackDelay = character.attackDelay;
+            characterSlot.moveSpeed = character.moveSpeed;
+            characterSlot.attackRange = character.attackRange;
 
-        return characterSlot;
+            characterSlot.GetComponent<SpriteRenderer>().sprite = character.characterImage;
+            characterSlot.characterImage = character.characterImage;
+            characterSlot.GetComponent<Animator>().runtimeAnimatorController = character.anim.runtimeAnimatorController;
+            characterSlot.isInitialize = true;
+
+            return characterSlot;
+        }
+        else
+        {
+            return null;
+        }
     }
 }

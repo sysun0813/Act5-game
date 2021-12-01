@@ -162,15 +162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613407256cc2fc641b233fcfcc7a458b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
   stageManager: {fileID: 1621724174}
   characterManager: {fileID: 214761435}
-  playerCharacters:
+  characterSlots:
   - {fileID: 906265255}
   - {fileID: 519210284}
   - {fileID: 200276582}
   - {fileID: 578125073}
   - {fileID: 670685920}
   - {fileID: 1703076041}
+  playerCharacters: []
 --- !u!4 &40028852
 Transform:
   m_ObjectHideFlags: 0
@@ -1919,13 +1921,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1069969132}
   - component: {fileID: 1069969131}
-  - component: {fileID: 1069969130}
   - component: {fileID: 1069969133}
   - component: {fileID: 1069969135}
   - component: {fileID: 1069969134}
+  - component: {fileID: 1069969130}
   m_Layer: 7
-  m_Name: EndStage
-  m_TagString: Untagged
+  m_Name: EndOfStage
+  m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1939,9 +1941,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069969129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3707ca3f53d4354ba37a040eb074dbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 42061719c13fc534a8eb296e975b4e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!61 &1069969131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3292,15 +3295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff316cbde1c586848ad29ade3840c6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endStage: {fileID: 1069969130}
+  endOfStage: {fileID: 1069969130}
   cameraController: {fileID: 323328587}
   fadeAnim: {fileID: 1441970779}
   enemySpawner: {fileID: 1914731881}
   playerSpawner: {fileID: 1802762002}
-  players:
-  - {fileID: 6106408823921481757, guid: 153805c0fa82aa64fa40452d70636f01, type: 3}
-  currentPlayers: []
-  playerspawnIndex: 0
   maps:
   - {fileID: 1842964850}
   - {fileID: 801741852}

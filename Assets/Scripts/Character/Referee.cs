@@ -21,11 +21,11 @@ public class Referee : MonoBehaviour
 
     private void Update()
     {
-        if (stageManager.currentPlayers.Count > 0)
-        {
-            tf = true;
-            refe.position = new Vector2(stageManager.currentPlayers[0].transform.position.x + 4.0f, transform.position.y);
-        }
+        //if (stageManager.currentPlayers.Count > 0)
+        //{
+        //    tf = true;
+        //    refe.position = new Vector2(stageManager.currentPlayers[0].transform.position.x + 4.0f, transform.position.y);
+        //}
         //else if (tf = true && (stageManager.players.Count == 0 || true /*true 대신 아군 깃발 베었는지 참거짓 코드 추가*/ ))
         //{
         //    //깃발 오른쪽으로 들기
@@ -35,10 +35,10 @@ public class Referee : MonoBehaviour
         //    //깃발 왼쪽으로 들기
         //}
 
-        else
-        {
-            refe.position = new Vector2(cam.position.x + 4f, -2.66f);
-        }
+        //else
+        //{
+        //    refe.position = new Vector2(cam.position.x + 4f, -2.66f);
+        //}
 
     }
 }
