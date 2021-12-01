@@ -8,7 +8,7 @@ public class StageManager : MonoBehaviour
 
     [SerializeField] CameraController cameraController;
 
-    [SerializeField] Animator fadeAnim;
+    public Animator fadeAnim;
 
     [Header("적 스포너")]
     [SerializeField] EnemySpawner enemySpawner;
@@ -52,7 +52,6 @@ public class StageManager : MonoBehaviour
     {
         if(currentStageInfo.map == null)
         {
-            Debug.Log("ㅇ");
             currentStageInfo = MakeStageInfo(stageNum);
             nextStageInfo = MakeStageInfo(stageNum + 1);
         }
@@ -81,7 +80,6 @@ public class StageManager : MonoBehaviour
             previousStageInfo.map.SetActive(false);
         }
         currentStageInfo.map.SetActive(true);
-        fadeAnim.SetTrigger("FadeIn");
     }
 
     // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수

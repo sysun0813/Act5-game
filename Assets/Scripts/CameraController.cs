@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
     }
 
-    private void LateUpdate()
+    public void CameraLateUpdate()
     {
         //if (stageManager.currentPlayers.Count > 0)
         //{

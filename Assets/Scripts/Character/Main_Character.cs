@@ -94,8 +94,6 @@ public class Main_Character : Character
     {
         if(collision.gameObject.CompareTag("Teleporter"))
         {
-            Debug.Log("D");
-
             collision.GetComponent<EndOfStage>().anim.SetTrigger("Teleport");
         }
     }

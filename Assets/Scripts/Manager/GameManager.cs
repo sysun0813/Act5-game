@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<Main_Character> characterSlots;
     [SerializeField] List<Main_Character> playerCharacters;
 
-
+    [SerializeField] CameraController cameraController;
     int activePlayerCharacterCount = 1;
 
     private void Awake()
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         switch(gameState)
         {
             case EGameState.Run:
-
+                cameraController.CameraLateUpdate();
                 break;
 
             case EGameState.Stop:
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         stageManager.InitStage(won);
+        stageManager.fadeAnim.SetTrigger("FadeIn");
         stageManager.StartStage(playerCharacters);
         gameState = EGameState.Run;
     }
