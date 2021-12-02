@@ -131,20 +131,6 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    // Stage 교체
-    IEnumerator ChangeStage()
-    {
-        yield return new WaitForSeconds(1f);
-        cameraController.targetTransform = GameObject.Find("StageStartPoint").transform;
-        //previousStageInfo.map.SetActive(false);
-        LoadStage();
-
-        // 응급처치 해놓은 거
-        endOfStage.GetComponent<BoxCollider2D>().enabled = true;
-
-        fadeAnim.SetTrigger("FadeIn");
-        //yield return StartCoroutine(SetPlayerPosition());
-    }
 
     StageInformation MakeStageInfo(int stageNum)
     {

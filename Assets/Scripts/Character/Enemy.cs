@@ -27,7 +27,7 @@ public class Enemy : Character
         canvas = GameObject.Find("Canvas");
         hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         anim = GetComponent<Animator>();
-        currentHP = maxHP;
+        SetCurrentHp();
         nowHPbar= hpBar.transform.GetChild(0).GetComponent<Image>();
     }
 
@@ -79,13 +79,13 @@ public class Enemy : Character
 
     void PlayAttackAnim()
     {
-        anim.SetTrigger("Attack");
+        anim.SetBool("Attack", true);
         isAttack = false;
     }
 
     public void AttackTarget()
     {
-        targetCharacter.anim.SetTrigger("Hit");
+        anim.SetBool("Attack", false);
         Attack(targetCharacter);
         /*if (currentHP <= epower)
         {

@@ -23,12 +23,11 @@ public class Main_Character : Character
         canvas = GameObject.Find("Canvas");
         hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         anim = GetComponent<Animator>();
-        currentHP = maxHP;
+        SetCurrentHp();
         nowHPbar = hpBar.transform.GetChild(0).GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayerCharacterUpdate()
     {
         Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x-0.5f, transform.position.y + height, 0));
         hpBar.position = _hpbarPos;
@@ -75,12 +74,13 @@ public class Main_Character : Character
 
     private void PlayAttackAnim()
     {
-        anim.SetTrigger("Attack");
+        anim.SetBool("Attack", true);
         isAttack = false;
     }
 
     public void AttackTarget()
     {
+        anim.SetBool("Attack", false);
         Attack(targetCharacter);
     }
 
@@ -95,6 +95,7 @@ public class Main_Character : Character
         if(collision.gameObject.CompareTag("Teleporter"))
         {
             collision.GetComponent<EndOfStage>().anim.SetTrigger("Teleport");
+            GameManager.Instance.StopStage();
         }
     }
 }

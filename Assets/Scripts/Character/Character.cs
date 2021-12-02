@@ -87,4 +87,8 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void SetCurrentHp()
+    {
+        currentHP = maxHP;
+    }
 }
