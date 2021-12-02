@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         switch(gameState)
         {
             case EGameState.Run:
-                cameraController.CameraLateUpdate();
+                cameraController.CameraLateUpdate(playerCharacters);
                 break;
 
             case EGameState.Stop:

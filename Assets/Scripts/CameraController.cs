@@ -24,12 +24,12 @@ public class CameraController : MonoBehaviour
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
     }
 
-    public void CameraLateUpdate()
+    public void CameraLateUpdate(List<Main_Character> playerCharacters)
     {
-        //if (stageManager.currentPlayers.Count > 0)
-        //{
-        //    targetTransform = stageManager.currentPlayers[0].transform;
-        //}
+        if (playerCharacters.Count > 0)
+        {
+            targetTransform = playerCharacters[0].transform;
+        }
         if (targetTransform != null)
         {
             Vector3 desiredPosition = new Vector3(

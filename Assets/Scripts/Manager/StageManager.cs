@@ -46,6 +46,7 @@ public class StageManager : MonoBehaviour
     {
         LoadStage();
         StartCoroutine(SetPlayerPosition(playerCharacters));
+        StartEnemiesSpawn();
     }
 
     public void InitStage(bool won)
@@ -102,7 +103,7 @@ public class StageManager : MonoBehaviour
         GameManager.Instance.ProgressStage(won);
     }
 
-    public void StartSpawn()
+    public void StartEnemiesSpawn()
     {
         StartCoroutine(SpawnEnemies(currentStageInfo.enemies));
 
