@@ -39,7 +39,6 @@ public class StageManager : MonoBehaviour
         // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수 추가
         endOfStage.OnFinishStage += StageResult;
 
-
     }
 
     public void StartStage(List<Main_Character> playerCharacters)

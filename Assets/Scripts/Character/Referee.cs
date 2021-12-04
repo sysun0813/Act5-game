@@ -12,6 +12,7 @@ public class Referee : MonoBehaviour
 
     StageManager stageManager;
 
+
     private void Start()
     {
         refe = GetComponent<Transform>();
