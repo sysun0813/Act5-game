@@ -82,7 +82,8 @@ public class Character : MonoBehaviour
         if(target.currentHP <= 0)
         {
             Destroy(target.gameObject);
-            //GameObject.Find("SwordMan(Clone)").GetComponent<Enemy>().Destroybar();
+            target.gameObject.GetComponent<Enemy>().Destroybar();
+            
             targetCharacter = null;
         }
     }

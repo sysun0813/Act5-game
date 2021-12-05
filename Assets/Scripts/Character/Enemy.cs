@@ -37,7 +37,7 @@ public class Enemy : Character
         hpBar.position = _hpbarPos;
         nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
 
-        if (currentHP <= 0)
+        if (currentHP <= 0||this.gameObject.activeSelf==false)
         {
             Destroybar();
         }
