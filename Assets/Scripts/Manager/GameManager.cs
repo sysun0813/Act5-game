@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CharacterManager characterManager;     // 캐릭터 매니저
 
     [SerializeField] List<Main_Character> characterSlots;   // 캐릭터 슬롯
-    [SerializeField] List<Main_Character> playerCharacters; // 현재 출전 중인 캐릭터
+    public List<Main_Character> playerCharacters; // 현재 출전 중인 캐릭터
 
     [SerializeField] CameraController cameraController;     // 카메라 컨트롤러
     int activePlayerCharacterCount = 1;

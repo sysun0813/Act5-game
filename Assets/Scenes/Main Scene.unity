@@ -2678,6 +2678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 323328586}
+  anim: {fileID: 1091271944}
 --- !u!1001 &1097193481
 PrefabInstance:
   m_ObjectHideFlags: 0
