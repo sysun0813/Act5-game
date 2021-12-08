@@ -95,8 +95,10 @@ public class Enemy : Character
 
     public void Destroybar()
     {
-        nowHPbar.gameObject.SetActive(false);
-        hpBar.gameObject.SetActive(false);
+        Destroy(hpBar.gameObject);
+        Destroy(nowHPbar.gameObject);
+        /*nowHPbar.gameObject.SetActive(false);
+        hpBar.gameObject.SetActive(false);*/
     }
 
     private void OnDrawGizmosSelected()
