@@ -48,6 +48,9 @@ TagManager:
   - name: Referee
     uniqueID: 3071950127
     locked: 0
+  - name: Shadow
+    uniqueID: 4030544895
+    locked: 0
   - name: Character
     uniqueID: 878522143
     locked: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
+    [SerializeField] MainUI mainUI;
+
     [SerializeField] EndOfStage endOfStage;
 
     [SerializeField] CameraController cameraController;
@@ -41,13 +43,6 @@ public class StageManager : MonoBehaviour
 
     }
 
-    public void StartStage(List<Main_Character> playerCharacters)
-    {
-        LoadStage();
-        StartCoroutine(SetPlayerPosition(playerCharacters));
-        StartEnemiesSpawn();
-    }
-
     public void InitStage(bool won)
     {
         if(currentStageInfo.map == null)
@@ -69,8 +64,16 @@ public class StageManager : MonoBehaviour
                 currentStageInfo = previousStageInfo;
                 previousStageInfo = MakeStageInfo(stageNum - 1);
             }
-            
         }
+    }
+    public void StartStage(List<Main_Character> playerCharacters)
+    {
+        LoadStage();
+        StartCoroutine(SetPlayerPosition(playerCharacters));
+        StartCoroutine(SpawnEnemies(currentStageInfo.enemies));
+
+        mainUI.SetCharacterList(playerCharacters.Count);
+        mainUI.IndicateStage(stageNum);
     }
 
     public void LoadStage()
@@ -101,13 +104,6 @@ public class StageManager : MonoBehaviour
         }
         GameManager.Instance.ProgressStage(won);
     }
-
-    public void StartEnemiesSpawn()
-    {
-        StartCoroutine(SpawnEnemies(currentStageInfo.enemies));
-
-    }
-
 
     // 플레이어 캐릭터 Stage 시작 지점으로 재위치
     public IEnumerator SetPlayerPosition(List<Main_Character> characters)

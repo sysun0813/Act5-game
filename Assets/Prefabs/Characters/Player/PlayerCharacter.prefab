@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 878522143
-  m_SortingLayer: 2
+  m_SortingLayerID: -264422401
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 878522143
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -5414630827966485006, guid: 4b7af295b52f3504ea62544d0c38f5ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d3ec185978c584ba0b187dc016659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerCharacter: 1
   Name: 
   maxHP: 0
   currentHP: 0
@@ -191,9 +192,9 @@ MonoBehaviour:
   attackRange: 0
   characterImage: {fileID: 0}
   anim: {fileID: 0}
-  isPlayerCharacter: 1
   targetCharacter: {fileID: 0}
   hitEffect: {fileID: 7197908196529670847}
+  isInitialize: 0
   boxCollider: {fileID: 3767850698244770529}
   prfHpbar: {fileID: 8756962171001504133, guid: f39cc96a36ca24846a4d27d50a60504c, type: 3}
   canvas: {fileID: 0}
