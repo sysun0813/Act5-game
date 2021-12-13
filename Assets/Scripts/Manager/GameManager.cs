@@ -37,9 +37,9 @@ public class GameManager : MonoBehaviour
     {
         // 하오마루 캐릭터 추가
         playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Haohmaru"));
-        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Dokan Ota"));
-        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Holy Beast Soldier"));
-        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Musashi Miyamoto"));
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[1], "Dokan Ota"));
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[2], "Holy Beast Soldier"));
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[3], "Musashi Miyamoto"));
 
         // 스테이지 설정
         stageManager.InitStage(true);
