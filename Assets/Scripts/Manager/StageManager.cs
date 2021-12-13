@@ -74,6 +74,7 @@ public class StageManager : MonoBehaviour
 
         mainUI.SetCharacterList(playerCharacters);
         mainUI.IndicateStage(stageNum);
+        endOfStage.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     public void LoadStage()
@@ -88,6 +89,7 @@ public class StageManager : MonoBehaviour
     // 플레이어가 스테이지 끝에 도달했을 때 실행될 함수
     void StageResult()
     {
+        fadeAnim.gameObject.SetActive(true);
         fadeAnim.SetTrigger("FadeOut");
         FinishStage(true);
     }

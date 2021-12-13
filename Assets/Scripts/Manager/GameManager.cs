@@ -105,5 +105,8 @@ public class GameManager : MonoBehaviour
         stageManager.fadeAnim.SetTrigger("FadeIn");
         stageManager.StartStage(playerCharacters);
         gameState = EGameState.Run;
+
+        yield return new WaitForSeconds(0.5f);
+        stageManager.fadeAnim.gameObject.SetActive(false);
     }
 }
