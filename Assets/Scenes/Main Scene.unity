@@ -2492,7 +2492,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 895951693
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 0, b: 0.1708355, a: 1}
@@ -2815,7 +2815,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -298237799
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.18867922, g: 0.18583123, b: 0.18583123, a: 1}
@@ -3058,7 +3058,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 895951693
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 0.4882213, g: 0.8980392, b: 0.15294117, a: 1}
@@ -3319,7 +3319,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 895951693
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3499,7 +3499,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -298237799
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -5305062486810272646, guid: e6c562ce1c85bcf439969338eb9adc7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5634,6 +5634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   haohmaru: {fileID: 6106408823921481757, guid: 153805c0fa82aa64fa40452d70636f01, type: 3}
   dokanOta: {fileID: 6665156900950355193, guid: 81308e0077cb677438ca1a6f858b70b9, type: 3}
+  holyBeastSoldier: {fileID: 4664759134542347216, guid: e3a927a085330274389297338243aa8c, type: 3}
+  musashiMiyamoto: {fileID: 615767017528472320, guid: 91c52ca2442bcc64a8c6a850a4396f42, type: 3}
 --- !u!4 &1500252409
 Transform:
   m_ObjectHideFlags: 0
@@ -6208,7 +6210,8 @@ MonoBehaviour:
   easyEnemies:
   - {fileID: 1903710147736189080, guid: 77a212776709ccc469f245a20f1148ab, type: 3}
   - {fileID: 1258328276314002132, guid: 42e2ce9e468e1df4693bcb6488446b07, type: 3}
-  normalEnemies: []
+  normalEnemies:
+  - {fileID: 508140773444675195, guid: 238d7ec86c6ca434982fde2db1a7a6b7, type: 3}
   bossEnemies: []
   previousStageInfo:
     map: {fileID: 0}

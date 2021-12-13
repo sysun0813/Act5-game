@@ -48,6 +48,9 @@ TagManager:
   - name: Referee
     uniqueID: 3071950127
     locked: 0
+  - name: TeleportStone
+    uniqueID: 3996729497
+    locked: 0
   - name: Shadow
     uniqueID: 4030544895
     locked: 0
@@ -56,7 +59,4 @@ TagManager:
     locked: 0
   - name: Effect
     uniqueID: 895951693
-    locked: 0
-  - name: TeleportStone
-    uniqueID: 3996729497
     locked: 0
