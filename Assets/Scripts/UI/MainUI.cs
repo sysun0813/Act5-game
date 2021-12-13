@@ -14,7 +14,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] Text stageNumText;
 
     [SerializeField] HpBar hpBarPrefab;
-    [SerializeField] List<HpBar> hpBars;
+    List<HpBar> hpBars;
 
     CharacterSlot[] characterSlots;
 

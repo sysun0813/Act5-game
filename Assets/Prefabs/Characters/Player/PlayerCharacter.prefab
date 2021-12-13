@@ -192,12 +192,12 @@ MonoBehaviour:
   attackRange: 0
   characterImage: {fileID: 0}
   anim: {fileID: 0}
+  hpBar: {fileID: 0}
+  boxCollider: {fileID: 3767850698244770529}
+  spriteRenderer: {fileID: 5867276503401642661}
   targetCharacter: {fileID: 0}
   hitEffect: {fileID: 7197908196529670847}
   isInitialize: 0
-  boxCollider: {fileID: 3767850698244770529}
-  prfHpbar: {fileID: 8756962171001504133, guid: f39cc96a36ca24846a4d27d50a60504c, type: 3}
-  canvas: {fileID: 0}
 --- !u!95 &7615253967271136353
 Animator:
   serializedVersion: 3

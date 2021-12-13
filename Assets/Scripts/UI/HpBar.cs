@@ -20,11 +20,10 @@ public class HpBar : MonoBehaviour
 
     }
 
-    public float SetHp(int currentHp, int MaxHp)
+    public void SetHp(int currentHp, int MaxHp)
     {
         float ratio = (float)currentHp / MaxHp;
         rectTransform.localScale = new Vector3(ratio, 1, 1);
-        return ratio;
     }
 
     public void DisableHpBar()

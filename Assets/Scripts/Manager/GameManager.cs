@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public List<Main_Character> playerCharacters; // 현재 출전 중인 캐릭터
 
     [SerializeField] CameraController cameraController;     // 카메라 컨트롤러
-    //int activePlayerCharacterCount = 1;
+    int activePlayerCharacterCount = 1;
 
     private void Awake()
     {
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         // 하오마루 캐릭터 추가
         playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Haohmaru"));
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[1], "Dokan Ota"));
 
         // 스테이지 설정
         stageManager.InitStage(true);
@@ -55,7 +56,10 @@ public class GameManager : MonoBehaviour
                 cameraController.CameraLateUpdate(playerCharacters);
                 for(int i = 0; i < playerCharacters.Count; i++)
                 {
-                    playerCharacters[i].PlayerCharacterUpdate();
+                    if(playerCharacters[i].gameObject.activeSelf)
+                    {
+                        playerCharacters[i].PlayerCharacterUpdate();
+                    }
                 }
                 break;
 
@@ -87,10 +91,14 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         stageManager.InitStage(won);
-        for(int i = 0; i <playerCharacters.Count; i++)
+        for(int i = 0; i < playerCharacters.Count; i++)
         {
             playerCharacters[i].InitCurrentHp();
             playerCharacters[i].hpBar.InitHp();
+            if(i > 0)
+            {
+                playerCharacters[i].gameObject.SetActive(false);
+            }
         }
         stageManager.fadeAnim.SetTrigger("FadeIn");
         stageManager.StartStage(playerCharacters);

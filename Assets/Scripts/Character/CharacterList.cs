@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterList : MonoBehaviour
 {
     [SerializeField] Main_Character haohmaru;
+    [SerializeField] Main_Character dokanOta;
 
     public Main_Character Haohmaru() { return haohmaru; }
 
@@ -14,6 +15,9 @@ public class CharacterList : MonoBehaviour
         {
             case "Haohmaru":
                 return haohmaru;
+
+            case "Dokan Ota":
+                return dokanOta;
 
             default:
                 return null;

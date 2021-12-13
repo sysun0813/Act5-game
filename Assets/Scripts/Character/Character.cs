@@ -7,6 +7,9 @@ public class Character : MonoBehaviour
     [Header("플레이어 캐릭터인지 확인")]
     public bool isPlayerCharacter;
 
+    //[Header("원거리 캐릭터인지 확인")]
+    //public bool isLongRangedCharacter;
+
     [Header("캐릭터 스탯")]
     public string Name;
 
@@ -29,53 +32,43 @@ public class Character : MonoBehaviour
 
     public Animator anim;
 
+    [HideInInspector]
     public HpBar hpBar;
-    //체력바
-    /*public GameObject prfHpbar;
-    public GameObject canvas;
 
-    RectTransform hpBar;
-    public float height = 1.7f;
-    */
+    public BoxCollider2D boxCollider;
+
+    public SpriteRenderer spriteRenderer;
 
     [Header("타겟 캐릭터")]
-    [SerializeField] protected Character targetCharacter;
+    public Character targetCharacter;
 
     [Header("피격 이팩트")]
     public GameObject hitEffect;
+
+    [Header("발사체 프리팹")]
+    public Projectile projectilePrefab;
 
     // 정보가 초기화 되었는지 확인
     [HideInInspector]
     public bool isInitialize;
 
-    private void Awake()
-    {
-        /*canvas = GameObject.Find("Canvas");
-        hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();*/
-    }
-
-    private void Update()
-    {
-        /*Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0));
-        hpBar.position = _hpbarPos;*/
-    }
-
     public void MoveCharacter()
     {
-        if(isPlayerCharacter)
+        if(currentHP > 0)
         {
-            transform.position += Vector3.right * moveSpeed * Time.deltaTime; 
-        }
-        else
-        {
-            transform.position -= (Vector3.right * moveSpeed * Time.deltaTime);
+            if (isPlayerCharacter)
+            {
+                transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            }
+            else
+            {
+                transform.position -= (Vector3.right * moveSpeed * Time.deltaTime);
+            }
         }
     }
 
     public void Attack(Character target)
     {
-        target.anim.SetTrigger("Hit");
-
         target.currentHP -= (int)(attackPower - target.defense);
 
         target.hitEffect.SetActive(true);
@@ -84,15 +77,28 @@ public class Character : MonoBehaviour
 
         if(target.currentHP <= 0)
         {
-            Destroy(target.gameObject);
-            //target.gameObject.GetComponent<Enemy>().Destroybar();
+            target.anim.SetTrigger("Die");
+            StartCoroutine(target.Die());
             target.hpBar.DisableHpBar();
             targetCharacter = null;
+        }
+        else
+        {
+            target.anim.SetTrigger("Hit");
         }
     }
 
     public void InitCurrentHp()
     {
         currentHP = maxHP;
+    }
+
+    public IEnumerator Die()
+    {
+        boxCollider.enabled = false;
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+        boxCollider.enabled = true;
+        yield return null;
     }
 }

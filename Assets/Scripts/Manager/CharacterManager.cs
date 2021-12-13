@@ -26,6 +26,14 @@ public class CharacterManager : MonoBehaviour
             characterSlot.GetComponent<SpriteRenderer>().sprite = character.characterImage;
             characterSlot.characterImage = character.characterImage;
             characterSlot.GetComponent<Animator>().runtimeAnimatorController = character.anim.runtimeAnimatorController;
+            if(character.projectilePrefab != null)
+            {
+                characterSlot.projectilePrefab = character.projectilePrefab;
+            }
+            else
+            {
+                characterSlot.projectilePrefab = null;
+            }
             FindObjectOfType<MainUI>().MatchHpBar(characterSlot);
             characterSlot.isInitialize = true;
 

@@ -3988,7 +3988,6 @@ MonoBehaviour:
   playerNameText: {fileID: 1419479527}
   stageNumText: {fileID: 2096392572}
   hpBarPrefab: {fileID: -424382841032362113, guid: f39cc96a36ca24846a4d27d50a60504c, type: 3}
-  hpBars: []
 --- !u!1 &1177254109
 GameObject:
   m_ObjectHideFlags: 0
@@ -5437,7 +5436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1479549845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5634,6 +5633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haohmaru: {fileID: 6106408823921481757, guid: 153805c0fa82aa64fa40452d70636f01, type: 3}
+  dokanOta: {fileID: 6665156900950355193, guid: 81308e0077cb677438ca1a6f858b70b9, type: 3}
 --- !u!4 &1500252409
 Transform:
   m_ObjectHideFlags: 0
@@ -7548,6 +7548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1c459bce14aa7408191db59795e5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyObjects: []
 --- !u!1 &1924592480
 GameObject:
   m_ObjectHideFlags: 0

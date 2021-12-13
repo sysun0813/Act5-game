@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Main_Character : Character
 {
-    [SerializeField] BoxCollider2D boxCollider;
-
     bool isAttack;
 
     private void Start()
@@ -65,6 +63,13 @@ public class Main_Character : Character
     {
         anim.SetBool("Attack", false);
         Attack(targetCharacter);
+    }
+
+    public void FireProjectile()
+    {
+        anim.SetBool("Attack", false);
+        Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        projectile.ActiveProjectile(this, attackPower, projectilePrefab.GetComponent<SpriteRenderer>().sprite);
     }
 
     private void OnDrawGizmosSelected()

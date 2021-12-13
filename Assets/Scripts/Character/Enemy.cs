@@ -5,12 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : Character
 {
-
-    [SerializeField] BoxCollider2D boxCollider;
-
     bool isAttack;
-
-
 
     private void Start()
     {
