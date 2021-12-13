@@ -37,15 +37,18 @@ public class GameManager : MonoBehaviour
     {
         // 하오마루 캐릭터 추가
         playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Haohmaru"));
-        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[1], "Dokan Ota"));
-        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[2], "Holy Beast Soldier"));
-        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[3], "Musashi Miyamoto"));
+        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[1], "Dokan Ota"));
+        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[2], "Holy Beast Soldier"));
+        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[3], "Musashi Miyamoto"));
+        
 
         // 스테이지 설정
         stageManager.InitStage(true);
 
         // 스테이지 시작
         stageManager.StartStage(playerCharacters);
+
+        
 
     }
 
@@ -108,5 +111,29 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         stageManager.fadeAnim.gameObject.SetActive(false);
+    }
+    public void restart()
+    {
+        // 스테이지 설정
+        stageManager.InitStage(true);
+
+        // 스테이지 시작
+        stageManager.StartStage(playerCharacters);
+    }
+    public void addHao()
+    {
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Haohmaru"));
+    }
+    public void addDokan()
+    {
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[1], "Dokan Ota"));
+    }
+    public void addHoly()
+    {
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[2], "Holy Beast Soldier"));
+    }
+    public void addMusashi()
+    {
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[3], "Musashi Miyamoto"));
     }
 }
