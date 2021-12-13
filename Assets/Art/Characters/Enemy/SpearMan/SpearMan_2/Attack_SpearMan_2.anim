@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack_SpearMan_1
+  m_Name: Attack_SpearMan_2
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1392641027836944386, guid: 53c79a3fe32326a44a6a22603484f5f9, type: 3}
+      value: {fileID: -3360993707242046345, guid: 80eb768dc2cef7044bbe35fe538f3188, type: 3}
     - time: 0.16666667
-      value: {fileID: -338111803490082245, guid: 53c79a3fe32326a44a6a22603484f5f9, type: 3}
+      value: {fileID: -7649018535439296878, guid: 80eb768dc2cef7044bbe35fe538f3188, type: 3}
     - time: 0.25
-      value: {fileID: -338111803490082245, guid: 53c79a3fe32326a44a6a22603484f5f9, type: 3}
+      value: {fileID: -7649018535439296878, guid: 80eb768dc2cef7044bbe35fe538f3188, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1392641027836944386, guid: 53c79a3fe32326a44a6a22603484f5f9, type: 3}
-    - {fileID: -338111803490082245, guid: 53c79a3fe32326a44a6a22603484f5f9, type: 3}
-    - {fileID: -338111803490082245, guid: 53c79a3fe32326a44a6a22603484f5f9, type: 3}
+    - {fileID: -3360993707242046345, guid: 80eb768dc2cef7044bbe35fe538f3188, type: 3}
+    - {fileID: -7649018535439296878, guid: 80eb768dc2cef7044bbe35fe538f3188, type: 3}
+    - {fileID: -7649018535439296878, guid: 80eb768dc2cef7044bbe35fe538f3188, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

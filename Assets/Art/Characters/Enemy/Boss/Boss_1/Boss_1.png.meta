@@ -1,79 +1,79 @@
 fileFormatVersion: 2
-guid: 4b9fe733e4ce7254eb2fc890509d8a6c
+guid: b7f6b708dbe7c3a44b5d0317432fbc22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8614621390610129181
-    second: HorseWarrior_1_0
+      213: 2606170599746044764
+    second: Boss_1_0
   - first:
-      213: 9132499053173845843
-    second: HorseWarrior_1_1
+      213: -186934391467744376
+    second: Boss_1_1
   - first:
-      213: -5551390374843703895
-    second: HorseWarrior_1_2
+      213: 7321953656073145585
+    second: Boss_1_2
   - first:
-      213: 328256783512836164
-    second: HorseWarrior_1_3
+      213: 5234633128129871323
+    second: Boss_1_3
   - first:
-      213: -5014287857744498752
-    second: HorseWarrior_1_4
+      213: 5748145110552777029
+    second: Boss_1_4
   - first:
-      213: -3797752734787658211
-    second: HorseWarrior_1_5
+      213: 3808024301101246470
+    second: Boss_1_5
   - first:
-      213: 3553560957850978345
-    second: HorseWarrior_1_6
+      213: 3461760767377928218
+    second: Boss_1_6
   - first:
-      213: 8101528151427861240
-    second: HorseWarrior_1_7
+      213: 9031751456524698551
+    second: Boss_1_7
   - first:
-      213: -674532716939976115
-    second: HorseWarrior_1_8
+      213: -2612095112044713748
+    second: Boss_1_8
   - first:
-      213: 6292765770738969867
-    second: HorseWarrior_1_9
+      213: -6297026483180350735
+    second: Boss_1_9
   - first:
-      213: -4870539927606476572
-    second: HorseWarrior_1_10
+      213: 7203414068075668954
+    second: Boss_1_10
   - first:
-      213: 7137394751217728321
-    second: HorseWarrior_1_11
+      213: -2863705709969725294
+    second: Boss_1_11
   - first:
-      213: 7080994842859808727
-    second: HorseWarrior_1_12
+      213: 1153852909765881013
+    second: Boss_1_12
   - first:
-      213: 8328111662121639823
-    second: HorseWarrior_1_13
+      213: -1179825286059758541
+    second: Boss_1_13
   - first:
-      213: 1517810216332700042
-    second: HorseWarrior_1_14
+      213: 4216251283264332088
+    second: Boss_1_14
   - first:
-      213: 1757579220860538548
-    second: HorseWarrior_1_15
+      213: -4909068716735781004
+    second: Boss_1_15
   - first:
-      213: -407657542861100619
-    second: HorseWarrior_1_16
+      213: -7329705051229645815
+    second: Boss_1_16
   - first:
-      213: -6257217200976034009
-    second: HorseWarrior_1_17
+      213: -2862288755636174990
+    second: Boss_1_17
   - first:
-      213: 3308241300089593504
-    second: HorseWarrior_1_18
+      213: -4877800157828273099
+    second: Boss_1_18
   - first:
-      213: 2266742613105096158
-    second: HorseWarrior_1_19
+      213: 5071090072058327893
+    second: Boss_1_19
   - first:
-      213: -5346301592203300770
-    second: HorseWarrior_1_20
+      213: -7417736520586822776
+    second: Boss_1_20
   - first:
-      213: 8221703390901285984
-    second: HorseWarrior_1_21
+      213: 4906089713867860858
+    second: Boss_1_21
   - first:
-      213: 1349445932636285231
-    second: HorseWarrior_1_22
+      213: 9024546008931653707
+    second: Boss_1_22
   - first:
-      213: 2807255066402173939
-    second: HorseWarrior_1_23
+      213: -4048024960473846899
+    second: Boss_1_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 36
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -163,7 +163,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HorseWarrior_1_0
+      name: Boss_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ee933acc77b27880800000000000000
-      internalID: -8614621390610129181
+      spriteID: c530ee53a5afa2420800000000000000
+      internalID: 2606170599746044764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_1
+      name: Boss_1_1
       rect:
         serializedVersion: 2
         x: 120
@@ -198,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35fa408b0872dbe70800000000000000
-      internalID: 9132499053173845843
+      spriteID: 883e2405920e76df0800000000000000
+      internalID: -186934391467744376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_2
+      name: Boss_1_2
       rect:
         serializedVersion: 2
         x: 240
@@ -219,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad1be9dddf75f2b0800000000000000
-      internalID: -5551390374843703895
+      spriteID: 1fccc1c8e0ecc9560800000000000000
+      internalID: 7321953656073145585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_3
+      name: Boss_1_3
       rect:
         serializedVersion: 2
         x: 360
@@ -240,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44815603ec33e8400800000000000000
-      internalID: 328256783512836164
+      spriteID: bdd3ca3881725a840800000000000000
+      internalID: 5234633128129871323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_4
+      name: Boss_1_4
       rect:
         serializedVersion: 2
         x: 480
@@ -261,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cfa59d92cba96ab0800000000000000
-      internalID: -5014287857744498752
+      spriteID: 54195e7e58385cf40800000000000000
+      internalID: 5748145110552777029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_5
+      name: Boss_1_5
       rect:
         serializedVersion: 2
         x: 600
@@ -282,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1e9632520cab4bc0800000000000000
-      internalID: -3797752734787658211
+      spriteID: 608e1331de1d8d430800000000000000
+      internalID: 3808024301101246470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_6
+      name: Boss_1_6
       rect:
         serializedVersion: 2
         x: 720
@@ -303,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92887641dd8c05130800000000000000
-      internalID: 3553560957850978345
+      spriteID: a10f1f4a315aa0030800000000000000
+      internalID: 3461760767377928218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_7
+      name: Boss_1_7
       rect:
         serializedVersion: 2
         x: 840
@@ -324,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fa4fa31ee86e6070800000000000000
-      internalID: 8101528151427861240
+      spriteID: 7b385c1f81a375d70800000000000000
+      internalID: 9031751456524698551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_8
+      name: Boss_1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -345,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d42e969511493a6f0800000000000000
-      internalID: -674532716939976115
+      spriteID: ce86a07c559ffbbd0800000000000000
+      internalID: -2612095112044713748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_9
+      name: Boss_1_9
       rect:
         serializedVersion: 2
         x: 120
@@ -366,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0d22a3c025645750800000000000000
-      internalID: 6292765770738969867
+      spriteID: 1f2dec0d6c77c98a0800000000000000
+      internalID: -6297026483180350735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_10
+      name: Boss_1_10
       rect:
         serializedVersion: 2
         x: 240
@@ -387,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e0c8a6bdbd586cb0800000000000000
-      internalID: -4870539927606476572
+      spriteID: ad5a3b9fdeaa7f360800000000000000
+      internalID: 7203414068075668954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_11
+      name: Boss_1_11
       rect:
         serializedVersion: 2
         x: 360
@@ -408,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14bf110f5be1d0360800000000000000
-      internalID: 7137394751217728321
+      spriteID: 2982fff44d21248d0800000000000000
+      internalID: -2863705709969725294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_12
+      name: Boss_1_12
       rect:
         serializedVersion: 2
         x: 480
@@ -429,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d72809fa4fb44260800000000000000
-      internalID: 7080994842859808727
+      spriteID: 5bc65a9ab1f430010800000000000000
+      internalID: 1153852909765881013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_13
+      name: Boss_1_13
       rect:
         serializedVersion: 2
         x: 600
@@ -450,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f5c86be65639370800000000000000
-      internalID: 8328111662121639823
+      spriteID: 33c626f372b60afe0800000000000000
+      internalID: -1179825286059758541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_14
+      name: Boss_1_14
       rect:
         serializedVersion: 2
         x: 720
@@ -471,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8928fc9958501510800000000000000
-      internalID: 1517810216332700042
+      spriteID: 83161c61432238a30800000000000000
+      internalID: 4216251283264332088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_15
+      name: Boss_1_15
       rect:
         serializedVersion: 2
         x: 840
@@ -492,14 +492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4be00044dfc246810800000000000000
-      internalID: 1757579220860538548
+      spriteID: 4772bf0f20c7fdbb0800000000000000
+      internalID: -4909068716735781004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_16
+      name: Boss_1_16
       rect:
         serializedVersion: 2
         x: 0
@@ -513,14 +513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b961c7ef95b75af0800000000000000
-      internalID: -407657542861100619
+      spriteID: 90412112718a74a90800000000000000
+      internalID: -7329705051229645815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_17
+      name: Boss_1_17
       rect:
         serializedVersion: 2
         x: 120
@@ -534,14 +534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7270c5d9b16e929a0800000000000000
-      internalID: -6257217200976034009
+      spriteID: 27ff5b3ba8b1748d0800000000000000
+      internalID: -2862288755636174990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_18
+      name: Boss_1_18
       rect:
         serializedVersion: 2
         x: 240
@@ -555,14 +555,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aedd134feb39ed20800000000000000
-      internalID: 3308241300089593504
+      spriteID: 53c2d43a9929e4cb0800000000000000
+      internalID: -4877800157828273099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_19
+      name: Boss_1_19
       rect:
         serializedVersion: 2
         x: 360
@@ -576,14 +576,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed5be5b9566157f10800000000000000
-      internalID: 2266742613105096158
+      spriteID: 553fb018d81206640800000000000000
+      internalID: 5071090072058327893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_20
+      name: Boss_1_20
       rect:
         serializedVersion: 2
         x: 480
@@ -597,14 +597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e50fd9e170f1ec5b0800000000000000
-      internalID: -5346301592203300770
+      spriteID: 88bfaf47fe7ee0990800000000000000
+      internalID: -7417736520586822776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_21
+      name: Boss_1_21
       rect:
         serializedVersion: 2
         x: 600
@@ -618,14 +618,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 064bb4f6cab591270800000000000000
-      internalID: 8221703390901285984
+      spriteID: a7baa47e99ee51440800000000000000
+      internalID: 4906089713867860858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_22
+      name: Boss_1_22
       rect:
         serializedVersion: 2
         x: 720
@@ -639,14 +639,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f29a1621de13ab210800000000000000
-      internalID: 1349445932636285231
+      spriteID: b485a81f7c0ad3d70800000000000000
+      internalID: 9024546008931653707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HorseWarrior_1_23
+      name: Boss_1_23
       rect:
         serializedVersion: 2
         x: 840
@@ -660,8 +660,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f331d20c9f55f620800000000000000
-      internalID: 2807255066402173939
+      spriteID: d8baa0deeb682d7c0800000000000000
+      internalID: -4048024960473846899
       vertices: []
       indices: 
       edges: []
