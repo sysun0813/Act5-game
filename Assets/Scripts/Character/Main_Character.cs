@@ -9,38 +9,27 @@ public class Main_Character : Character
 
     bool isAttack;
 
-
-    public GameObject prfHpbar;
-    public GameObject canvas;
-
-    RectTransform hpBar;
-    private float height = 1f;
-
-    Image nowHPbar;
-
     private void Start()
     {
-        canvas = GameObject.Find("Canvas");
-        hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         anim = GetComponent<Animator>();
-        SetCurrentHp();
-        nowHPbar = hpBar.transform.GetChild(0).GetComponent<Image>();
+        InitCurrentHp();
     }
 
     public void PlayerCharacterUpdate()
     {
-        Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x-0.5f, transform.position.y + height, 0));
-        hpBar.position = _hpbarPos;
-        nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
-
-        
+        // 적 캐릭터가 공격 사거리 안에 들어왔을 때
         if (Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("EnemyCharacter")))
         {
+            // 이동 애니메이션 정지
+            anim.SetBool("IsMove", false);
+
             if (targetCharacter == null)
             {
                 try
                 {
+                    // 공격 타겟 설정
                     targetCharacter = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("EnemyCharacter"))[0].GetComponent<Enemy>();
+                    // 적이 사거리에 들어오자마자 공격하도록 애니메이션 함수 호출
                     PlayAttackAnim();
                 }
                 catch
@@ -48,19 +37,13 @@ public class Main_Character : Character
 
                 }
             }
-
-            anim.SetBool("IsMove", false);
+            
             if (!isAttack && targetCharacter != null)
             {
                 isAttack = true;
                 Invoke("PlayAttackAnim", attackDelay);
             }
         }
-        //else if(Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone")))
-        //{ 
-        //    anim.SetBool("IsMove", false);
-        //    Physics2D.OverlapCircleAll(boxCollider.bounds.center, attackRange, LayerMask.GetMask("TeleportStone"))[0].GetComponent<EndStage>().FinishStage();
-        //}
         else
         {
             isAttack = false;

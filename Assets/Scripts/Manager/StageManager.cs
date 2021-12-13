@@ -72,7 +72,7 @@ public class StageManager : MonoBehaviour
         StartCoroutine(SetPlayerPosition(playerCharacters));
         StartCoroutine(SpawnEnemies(currentStageInfo.enemies));
 
-        mainUI.SetCharacterList(playerCharacters.Count);
+        mainUI.SetCharacterList(playerCharacters);
         mainUI.IndicateStage(stageNum);
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
+    // 캐릭터 도감
     [SerializeField] CharacterList characterList;
 
 
@@ -25,6 +26,7 @@ public class CharacterManager : MonoBehaviour
             characterSlot.GetComponent<SpriteRenderer>().sprite = character.characterImage;
             characterSlot.characterImage = character.characterImage;
             characterSlot.GetComponent<Animator>().runtimeAnimatorController = character.anim.runtimeAnimatorController;
+            FindObjectOfType<MainUI>().MatchHpBar(characterSlot);
             characterSlot.isInitialize = true;
 
             return characterSlot;

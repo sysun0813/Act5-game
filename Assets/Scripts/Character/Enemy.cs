@@ -10,39 +10,17 @@ public class Enemy : Character
 
     bool isAttack;
 
-    public GameObject prfHpbar;
-    public GameObject canvas;
-
-    RectTransform hpBar;
-    private float height = 0.8f;
-
-    Image nowHPbar;
-
-    //private float epower;
 
 
     private void Start()
     {
-        //epower = GameObject.Find("¿µ¿õ(Clone)").GetComponent<Main_Character>().attackPower;
-        canvas = GameObject.Find("Canvas");
-        hpBar = Instantiate(prfHpbar, canvas.transform).GetComponent<RectTransform>();
         anim = GetComponent<Animator>();
-        SetCurrentHp();
-        nowHPbar= hpBar.transform.GetChild(0).GetComponent<Image>();
+        InitCurrentHp();
+    
     }
 
     private void Update()
     {
-        Vector3 _hpbarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x+0.5f, transform.position.y + height, 0));
-        hpBar.position = _hpbarPos;
-        nowHPbar.fillAmount = (float)currentHP / (float)maxHP;
-
-        if (currentHP <= 0||this.gameObject.activeSelf==false)
-        {
-            Destroybar();
-        }
-
-
         if ((Physics2D.OverlapCircle(boxCollider.bounds.center, attackRange, LayerMask.GetMask("PlayerCharacter"))))
         {
             if(targetCharacter == null)
@@ -87,19 +65,9 @@ public class Enemy : Character
     {
         anim.SetBool("Attack", false);
         Attack(targetCharacter);
-        /*if (currentHP <= epower)
-        {
-            Destroybar();
-        }*/
+        
     }
 
-    public void Destroybar()
-    {
-        Destroy(hpBar.gameObject);
-        Destroy(nowHPbar.gameObject);
-        /*nowHPbar.gameObject.SetActive(false);
-        hpBar.gameObject.SetActive(false);*/
-    }
 
     private void OnDrawGizmosSelected()
     {

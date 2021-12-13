@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
         enemy.GetComponent<SpriteRenderer>().sortingOrder = sorter.GetSortingOrder(enemy.gameObject);
 
         enemy.hitEffect.GetComponent<SpriteRenderer>().sortingOrder = enemy.GetComponent<SpriteRenderer>().sortingOrder;
-
+        FindObjectOfType<MainUI>().MatchHpBar(enemy);
     }
 
     

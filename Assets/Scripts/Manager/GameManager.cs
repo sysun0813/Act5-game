@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public List<Main_Character> playerCharacters; // 현재 출전 중인 캐릭터
 
     [SerializeField] CameraController cameraController;     // 카메라 컨트롤러
-    int activePlayerCharacterCount = 1;
+    //int activePlayerCharacterCount = 1;
 
     private void Awake()
     {
@@ -89,7 +89,8 @@ public class GameManager : MonoBehaviour
         stageManager.InitStage(won);
         for(int i = 0; i <playerCharacters.Count; i++)
         {
-            playerCharacters[i].SetCurrentHp();
+            playerCharacters[i].InitCurrentHp();
+            playerCharacters[i].hpBar.InitHp();
         }
         stageManager.fadeAnim.SetTrigger("FadeIn");
         stageManager.StartStage(playerCharacters);

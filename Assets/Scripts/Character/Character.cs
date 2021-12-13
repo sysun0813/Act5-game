@@ -10,9 +10,9 @@ public class Character : MonoBehaviour
     [Header("캐릭터 스탯")]
     public string Name;
 
-    public float maxHP;
+    public int maxHP;
 
-    public float currentHP;
+    public int currentHP;
 
     public float attackPower;
 
@@ -29,6 +29,7 @@ public class Character : MonoBehaviour
 
     public Animator anim;
 
+    public HpBar hpBar;
     //체력바
     /*public GameObject prfHpbar;
     public GameObject canvas;
@@ -75,20 +76,22 @@ public class Character : MonoBehaviour
     {
         target.anim.SetTrigger("Hit");
 
-        target.currentHP -= attackPower - target.defense;
+        target.currentHP -= (int)(attackPower - target.defense);
 
         target.hitEffect.SetActive(true);
+
+        target.hpBar.SetHp(target.currentHP, target.maxHP);
 
         if(target.currentHP <= 0)
         {
             Destroy(target.gameObject);
-            target.gameObject.GetComponent<Enemy>().Destroybar();
-            
+            //target.gameObject.GetComponent<Enemy>().Destroybar();
+            target.hpBar.DisableHpBar();
             targetCharacter = null;
         }
     }
 
-    public void SetCurrentHp()
+    public void InitCurrentHp()
     {
         currentHP = maxHP;
     }
