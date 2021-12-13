@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // 하오마루 캐릭터 추가
-        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Haohmaru"));
-        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[1], "Dokan Ota"));
+        //playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Haohmaru"));
+        playerCharacters.Add(characterManager.InitializeCharacter(characterSlots[0], "Dokan Ota"));
 
         // 스테이지 설정
         stageManager.InitStage(true);

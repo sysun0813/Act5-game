@@ -18,7 +18,6 @@ public class Projectile : MonoBehaviour
         this.owner = owner;
         this.isPlayer = owner.isPlayerCharacter;
         GetComponent<SpriteRenderer>().sprite = sprite;
-        gameObject.SetActive(true);
     }
 
     private void LateUpdate()
@@ -38,7 +37,7 @@ public class Projectile : MonoBehaviour
         {
             if(collision.gameObject.layer == LayerMask.NameToLayer("EnemyCharacter"))
             {
-                Enemy enemy = collision.GetComponent<Enemy>();
+                Character enemy = collision.GetComponent<Character>();
                 enemy.currentHP -= (int)attack;
 
                 enemy.hitEffect.SetActive(true);
@@ -48,7 +47,7 @@ public class Projectile : MonoBehaviour
                 if (enemy.currentHP <= 0)
                 {
                     enemy.anim.SetTrigger("Die");
-                    StartCoroutine(enemy.Die());
+                    enemy.StartDie();
                     enemy.hpBar.DisableHpBar();
                     owner.targetCharacter = null;
                 }
@@ -63,7 +62,7 @@ public class Projectile : MonoBehaviour
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerCharacter"))
             {
-                Main_Character player = collision.GetComponent<Main_Character>();
+                Character player = collision.GetComponent<Character>();
                 player.currentHP -= (int)attack;
 
                 player.hitEffect.SetActive(true);
@@ -73,7 +72,7 @@ public class Projectile : MonoBehaviour
                 if (player.currentHP <= 0)
                 {
                     player.anim.SetTrigger("Die");
-                    StartCoroutine(player.Die());
+                    player.StartDie();
                     player.hpBar.DisableHpBar();
                     owner.targetCharacter = null;
                 }

@@ -93,6 +93,11 @@ public class Character : MonoBehaviour
         currentHP = maxHP;
     }
 
+    public void StartDie()
+    {
+        StartCoroutine(Die());
+    }
+
     public IEnumerator Die()
     {
         boxCollider.enabled = false;

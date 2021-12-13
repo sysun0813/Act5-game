@@ -26,6 +26,8 @@ public class CharacterManager : MonoBehaviour
             characterSlot.GetComponent<SpriteRenderer>().sprite = character.characterImage;
             characterSlot.characterImage = character.characterImage;
             characterSlot.GetComponent<Animator>().runtimeAnimatorController = character.anim.runtimeAnimatorController;
+            characterSlot.transform.GetChild(0).localPosition = character.transform.GetChild(0).localPosition;
+            characterSlot.transform.GetChild(1).localPosition = character.transform.GetChild(1).localPosition;
             if(character.projectilePrefab != null)
             {
                 characterSlot.projectilePrefab = character.projectilePrefab;
